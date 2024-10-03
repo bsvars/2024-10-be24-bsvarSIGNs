@@ -38,32 +38,24 @@ monthly               = xts::to.monthly(variables, OHLC = FALSE)
 plot(monthly)
 ```
 
-# Prior Setup
+# Prior Setup and Hyper-parameter Estimation
 
 ```{r priors}
-set.seed(42)
-library(BVAR)
+set.seed(123)
+library(bsvarSIGNs)
 
-# priors
-mn      = bv_minnesota(
-  lambda = bv_lambda(mode = 0.2, sd = 0.4, min = 0.0001, max = 5),
-  alpha = bv_alpha(mode = 2), 
-  psi <- bv_psi(scale = 0.004, shape = 0.004, mode = "auto", min = "auto", max = "auto"),
-  var = 1e07
-)
+burn = 1000
+S    = 10000
 
-soc     = bv_soc(mode = 1, sd = 1, min = 1e-04, max = 50)
-sur     = bv_sur(mode = 1, sd = 1, min = 1e-04, max = 50)
+# forecasting for a model with estimated hyper-parameters
+############################################################
+set.seed(123)
 
-priors  = bv_priors(hyper = "auto", mn = mn, soc = soc, sur = sur)
+Y = as.matrix(monthly)
+# specify the model
+spec = specify_bsvarSIGN$new(Y, p = 1)
 
-# MH setup
-mh      = bv_metropolis(
-  scale_hess = c(0.05, 0.0001, 0.0001),
-  adjust_acc = TRUE, 
-  acc_lower = 0.25, 
-  acc_upper = 0.45
-)
+spec$prior$estimate_hyper(S + burn, burn, mu = TRUE, delta = TRUE, lambda = TRUE, psi = TRUE)
 ```
 
 # Estimation
@@ -76,48 +68,35 @@ mh      = bv_metropolis(
 #| warning: false
 #| error: false
 
-# estimation
-p     = 1
-run   = bvar(
-  monthly, 
-  lags = p, 
-  n_draw = 3e4,
-  n_burn = 1e4,
-  n_thin = 1,
-  priors = priors, 
-  mh = mh, 
-  verbose = FALSE # without progress bar
-)
+# estimate the model
+post = estimate(spec, S = S)
+
 ```
 
 ## Report MCMC convergence
 
 ```{r mcmc}
-plot.ts(run$hyper, main = "", col = "#FF00FF", xlab = "s")
+
+rownames(spec$prior$hyper) = c("mu", "delta", "lambda", paste0("psi", 1:2))
+plot.ts(t(spec$prior$hyper), col = "#F500BD", bty ="n")
+
 ```
 
 ## Report the Posterior Moments
 
 ```{r means}
-mean_A  = t(apply(run$beta, 2:3, mean))
-rownames(mean_A) = colnames(monthly)
-knitr::kable(mean_A, caption = "Posterior estimates for autoregressive parameters", digits = 3)
+mean_A  = apply(post$posterior$A, 1:2, mean)
+rownames(mean_A) = colnames(Y)
+colnames(mean_A) = c(paste0("A",1:2) ,"mu0")
+knitr::kable(mean_A, caption = "Posterior estimates for autoregressive parameters", digits = 2)
 ```
 
 # Forecasting
 
 ```{r forecasting}
-# forecasting 
-predict(run) <- predict(
-  run, 
-  horizon = 20, 
-  conf_bands = seq(from = 0.05, to = 0.4, by = 0.01)
-)
-plot(
-  predict(run), 
-  area = TRUE, 
-  t_back = 32
-)
+# forecast
+fore = forecast(post, 12)
+plot(fore, probability = 0.68, col = "#F500BD")
 ```
 
 # Conclusion!
