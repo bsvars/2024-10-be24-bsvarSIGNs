@@ -1,5 +1,5 @@
 ---
-title: "Lecture 7: Bayesian Vector Autoregressions"
+title: "Bayesian Vector Autoregressions"
 author: "by Tomasz Woźniak"
 email: "tomasz.wozniak@unimelb.edu.au"
 title-slide-attributes:
@@ -36,11 +36,11 @@ $$ $$
 
 
 
-
-
 ##  {background-color="#001D31"}
 
 ![](bsvarSIGNs.png){.absolute top=30 right=275 width="500"}
+
+
 
 
 
@@ -48,13 +48,13 @@ $$ $$
 
 $$ $$
 
-### Lecture Slides [as a Website](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+### Lecture Slides [as a Website](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 
 ### A Dedicated Reading [Woźniak (2016, AERev)]( https://doi.org/10.1111/1467-8462.12179)
 
-### **Quarto** [document template](https://github.com/Bayesian-Econometrics-2023/be23-lecture7/blob/main/be23-AUdata.qmd) for your own Australian data forecasting
+### **Quarto** [document template](https://github.com/bsvars/2024-10-be24-bsvarSIGNs/blob/main/be23-AUdata.qmd) for your own Australian data forecasting
 
-### GitHub [repo](https://github.com/Bayesian-Econometrics-2023/be23-lecture7) to reproduce the slides and results
+### GitHub [repo](https://github.com/bsvars/2024-10-be24-bsvarSIGNs) to reproduce the slides and results
 
 ### A [Kahoot!](https://kahoot.it/) Quiz
 
@@ -83,7 +83,7 @@ $$ $$
 :::
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## VAR(p) Model
@@ -107,7 +107,7 @@ y_t &= \mathbf{A}_1 y_{t-1} + \dots + \mathbf{A}_p y_{t-p} + \boldsymbol\mu_0 + 
 :::
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## A Bivariate VAR(2) Model
@@ -128,10 +128,10 @@ Then, the model equation is:
 
 ### Task:
 
-Perform the matrix multiplications and write out the equations for $y_{1.t}$ and $y_{2.t}$.
+Perform the matrix multiplications and write out the equations for $y_{1.t}$.
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Three Useful Distributions {background-color="#F500BD"}
@@ -156,7 +156,7 @@ MN_{K\times N}\left( M, Q, P \right) &\propto \exp\left\{ -\frac{1}{2}\text{tr}\
 -   $\text{tr}()$ is a trace of a matrix - a sum of diagonal elements
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Inverse Wishart Distribution
@@ -174,7 +174,7 @@ IW_{N}\left( S, \nu \right) \propto \text{det}(\mathbf\Sigma)^{-\frac{\nu+N+1}{2
 \end{align*}
 ```
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Normal-Inverse Wishart Distribution
@@ -198,7 +198,7 @@ NIW_{K\times N}\left( M,P,S,\nu\right) \propto &\text{det}(\mathbf{\Sigma})^{-(\
 \end{align*}
 ```
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Example: Error Term Distribution
@@ -221,7 +221,7 @@ E|X &\sim MN_{T\times N}\left(\mathbf{0}_{T\times N},\mathbf\Sigma, I_T\right)
 :::
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Example: Univariate *Inverse Wishart* Distribution
@@ -243,7 +243,7 @@ Consider a case where:
 :::
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Bayesian Estimation {background-color="#F500BD"}
@@ -277,7 +277,7 @@ $$ where $K=pN+1$
 :::
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## The model as Predictive Density
@@ -298,7 +298,7 @@ Y|X,\mathbf{A}, \mathbf{\Sigma} &\sim MN_{T\times N}\left(X\mathbf{A},\mathbf{\S
 \end{align*}
 ```
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Likelihood Function
@@ -318,7 +318,7 @@ L\left(\mathbf{A},\mathbf{\Sigma}|Y,X\right)&\propto\text{det}(\mathbf{\Sigma})^
 \end{align*}
 ```
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Likelihood Function as NIW
@@ -343,7 +343,7 @@ L\left( \mathbf{A},\mathbf{\Sigma}|Y,X \right) &= NIW_{K\times N}\left(\widehat{
 \end{align*}
 ```
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Prior Distribution
@@ -367,7 +367,7 @@ p\left( \mathbf{A},\mathbf{\Sigma} \right)
 \end{align*}
 ```
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Posterior Distribution
@@ -391,7 +391,7 @@ p\left( \mathbf{A},\mathbf{\Sigma} |Y,X\right)
 \end{align*}
 ```
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Joint Posterior Distribution
@@ -416,8 +416,33 @@ p(\mathbf{\Sigma}|Y,X) &= IW_N\left( \overline{S}, \overline{\nu} \right)
 \end{align*}
 ```
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
+
+
+
+
+## Joint Posterior Distribution
+
+### Task.
+
+- Derive the full conditional posterior distribution of $\mathbf{A}$ given $\mathbf{\Sigma}$ and data $Y$ and $X$, denoted by $p(\mathbf{A}|Y,X,\mathbf{\Sigma})$
+
+$$ $$
+
+Hint: Proceed by:
+
+- writing out the kernel of this distribution as a product of the likelihood and the prior,
+- collecting all the terms within the exponential function and under the trace operator,
+- completing the squares,
+- applying the conditioning whenever convenient.
+
+::: footer
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
+:::
+
+
+
 
 ## Posterior Mean of $\mathbf{A}$
 
@@ -425,7 +450,7 @@ Posterior mean of matrix $\mathbf{A}$ is: \begin{align*}
 \overline{A} &= \overline{V}\left( X'Y + \underline{V}^{-1}\underline{A} \right)\\[2ex] 
 &= \overline{V}\left( X'X\widehat{A} + \underline{V}^{-1}\underline{A} \right)\\[2ex]
 &= \overline{V} X'X\widehat{A} + \overline{V}\underline{V}^{-1}\underline{A} 
-\end{align*} <font color="FF00FF">a linear combination</font> of the MLE $\widehat{A}$ and the prior mean $\underline{A}$
+\end{align*} <font color="F500BD">a linear combination</font> of the MLE $\widehat{A}$ and the prior mean $\underline{A}$
 
 Note that: $$
 \overline{V} X'X + \overline{V}\underline{V}^{-1} = \overline{V} ( X'X + \underline{V}^{-1}) = I_K
@@ -434,7 +459,7 @@ $$
 [Play with the posterior in an interactive graph](https://rpsychologist.com/d3/bayes/){preview-link="true"}
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Marginal Data Density
@@ -454,7 +479,7 @@ and so is the analytical formula for the *MDD*: $$p(data)$$
 This can be used to our advantage!
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Minnesota and Dummy Observations Prior {background-color="#F500BD"}
@@ -472,7 +497,7 @@ $$    $$ The prior reflects the following stylised facts about macro time series
 -   the effect of other variables lags should be less than that of own lags
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Minnesota Prior
@@ -502,7 +527,7 @@ Set
 $\psi =(\psi_1, \dots, \psi_N)$ have to be chosen (or estimated)
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Minnesota Prior
@@ -514,7 +539,8 @@ $\psi =(\psi_1, \dots, \psi_N)$ have to be chosen (or estimated)
 \mathbf{A}|\mathbf{\Sigma} &\sim MN_{K\times N}\left( \underline{A},\mathbf{\Sigma},\underline{V} \right)
 \end{align*}
 ```
-Set \begin{align*}
+For $\quad l = 1+\text{floor}((i-1)/N) \quad\text{and }\quad k = i - (l-1)N$, set:
+\begin{align*}
 \underline{A} &= \begin{bmatrix} I_N \\ \mathbf{0}_{((p-1)N +1)\times N}\end{bmatrix}&
 \underline{V}_{ij} &= \left\{\begin{array} (\lambda ^ 2 / (\psi_k l^2) &\text{ for }i=j,\text{ and } i\neq pN+1 \\
 \lambda^2 &\text{ for }i=j,\text{ and } i= pN+1 \\
@@ -522,15 +548,28 @@ Set \begin{align*}
 \end{array}\right.
 \end{align*}
 
-for $\quad l = 1+\text{floor}((i-1)/N) \quad\text{and }\quad k = i - (l-1)N$
-
 ### Hyper-parameters.
 
 $\lambda^2$ has to be chosen (or estimated)
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
+
+
+## Minnesota Prior
+
+### Task.
+
+Consider a simple case of a model for $N=2$ observations and with $p=1$ lag.
+
+- write out the $3\times2$ matrix $\underline{A}$ and the $3\times3$ matrix $\underline{V}$ for the Minnesota prior determining every of its elements.
+
+::: footer
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
+:::
+
+
 
 ## Dummy Observations Prior
 
@@ -555,7 +594,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y^*,X^* \right) &= MNIV_{K\times N}\left( \u
 :::
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Dummy Observations Prior
@@ -568,7 +607,7 @@ Let an $N$-vector $\bar{Y}_0$ denote its columns' means.
 ### Sum-of-coefficients prior.
 
 Generate additional $N$ rows by $$
-Y^+ = \text{diag}\left(\frac{\bar{Y}_0}{\mu}\right) \quad\text{ and }\quad X^+ = \begin{bmatrix}\mathbf{0}_N & Y^+ & \dots & Y^+ \end{bmatrix}
+Y^+ = \text{diag}\left(\frac{\bar{Y}_0}{\mu}\right) \quad\text{ and }\quad X^+ = \begin{bmatrix}Y^+ & \dots & Y^+ & \mathbf{0}_N \end{bmatrix}
 $$
 
 -   $\mu$ is a hyper-parameter to be chosen (or estimated)
@@ -577,7 +616,7 @@ $$
 :::
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Dummy Observations Prior
@@ -585,7 +624,7 @@ $$
 ### Dummy-initial-observation prior.
 
 Generate an additional row by $$
-Y^{++} = \frac{\bar{Y}_0'}{\delta} \quad\text{ and }\quad X^{++} = \begin{bmatrix}\frac{1}{\delta} & Y^{++} & \dots & Y^{++} \end{bmatrix}
+Y^{++} = \frac{\bar{Y}_0'}{\delta} \quad\text{ and }\quad X^{++} = \begin{bmatrix} Y^{++} & \dots & Y^{++} & \frac{1}{\delta} \end{bmatrix}
 $$
 
 -   hyper-parameter $\delta$ is to be chosen (or estimated)
@@ -602,7 +641,7 @@ $$
 :::
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 
@@ -622,7 +661,7 @@ Write out the matrices $Y^*$ and $X^*$ of dimensions $2\times 3$ and $3\times 3$
 
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 
@@ -660,7 +699,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y^*,X^*,\psi,\lambda,\mu,\delta \right) &= M
 \end{align*}
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Bayesian Estimation for Hierarchical Prior
@@ -676,7 +715,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y^*,X^*,\psi,\lambda,\mu,\delta \right) &= M
 $$ p(\psi,\lambda,\mu,\delta|data) \propto p(\psi,\lambda,\mu,\delta)p(data|\psi,\lambda,\mu,\delta)$$ - Use an $(N+3)$-variate Student-t distribution as the candidate generating density
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ## Bayesian Estimation for Hierarchical Prior
@@ -696,10 +735,10 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y,X, Y^*,X^* \right) &= MNIW_{K\times N}\lef
 ```
 ### R implementation.
 
-Package [**BVAR**](https://cran.r-project.org/web/packages/BVAR/index.html) by [Kuschnig, Vashold (2021)](https://doi.org/10.1162%2FREST_a_00483) implements this algorithm.
+Package [**bsvarSIGNs**](https://cran.r-project.org/package=bsvarSIGNs) by [Wang & Woźniak (2024)](https://doi.org/10.32614/CRAN.package.bsvarSIGNs) implements this algorithm.
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 
@@ -714,7 +753,7 @@ Package [**BVAR**](https://cran.r-project.org/web/packages/BVAR/index.html) by [
 ## The objective of economic forecasting
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 $\left.\right.$
@@ -737,7 +776,7 @@ Summary statistics are also communicated to general audiences.
 ## One-Period Ahead Predictive Density
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ### VAR(p) model.
@@ -758,7 +797,7 @@ y_{t+h}|Y_{t+h-1},\mathbf{A},\mathbf\Sigma &\sim N_N\left(\mathbf{A}_1 y_{t+h-1}
 ## One-Period Ahead Predictive Density
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 $\left.\right.$
@@ -779,7 +818,7 @@ p(y_{T+1}|Y,X) &= \int p(y_{T+1}|Y_{T},\mathbf{A},\mathbf\Sigma) p(\mathbf{A},\m
 ## Sampling from One-Period Ahead Predictive Density
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 $\left.\right.$
@@ -804,7 +843,7 @@ and obtain $\left\{y_{T+1}^{(s)}\right\}_{s=1}^{S}$
 ## $h$-Period Ahead Predictive Density
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 $\left.\right.$
@@ -824,7 +863,7 @@ p(y_{T+2},y_{T+1}|Y,X)
 ## $h$-Period Ahead Predictive Density
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 $\left.\right.$
@@ -853,33 +892,18 @@ and obtain $\left\{y_{T+2}^{(s)},y_{T+1}^{(s)}\right\}_{s=1}^{S}$
 
 
 
-## The Bayesian VARs Quiz
-
-$$ $$
-
-[GO TO THE GAME](https://kahoot.it)
-
-
-::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
-:::
 
 
 
 
 
 
+## US Data Analysis Using R Package bsvarSIGNs {background-color="#F500BD"}
 
-
-
-
-
-## US Data Analysis Using R Package BVAR {background-color="#F500BD"}
-
-## Data preparation
+## Data 
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
@@ -890,20 +914,15 @@ $$ $$
 #| output-location: column
 #| cache: true
 
-set.seed(42)
-library(BVAR)
+# upload package
+library(bsvarSIGNs)
 
-# data
-x = fred_qd[, c("GDPC1", 
-                "GDPCTPI", 
-                "FEDFUNDS")]
-x = fred_transform(
-  x, 
-  codes = c(4, 4, 1)
-)
+# upload data
+data(optimism)
 
+# plot data
 plot.ts(
-  x, 
+  optimism[,c(1,2,5)], 
   main = "",
   col = "#F500BD",
   lwd = 4,
@@ -915,185 +934,160 @@ plot.ts(
 
 
 
-## Prior setup
+## Setup and hyper-parameters estimation
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
 #| label: priors
 #| warning: false
+#| messages: false
 #| cache: true
 
-# priors
-mn      = bv_minnesota(
-  lambda = bv_lambda(mode = 0.2, sd = 0.4, min = 0.0001, max = 5),
-  alpha = bv_alpha(mode = 2), 
-  psi <- bv_psi(scale = 0.004, shape = 0.004, mode = "auto", min = "auto", max = "auto"),
-  var = 1e07
+# set seed
+set.seed(123)
+
+# MCMC settings
+burn = 1000
+S    = 10000
+
+# specify the model
+spec = specify_bsvarSIGN$new(
+  optimism[,c(1,2,5)],
+  p        = 4,
 )
 
-soc     = bv_soc(mode = 1, sd = 1, min = 1e-04, max = 50)
-sur     = bv_sur(mode = 1, sd = 1, min = 1e-04, max = 50)
-
-priors  = bv_priors(hyper = "auto", mn = mn, soc = soc, sur = sur)
-
-# MH setup
-mh      = bv_metropolis(
-  scale_hess = c(0.05, 0.0001, 0.0001),
-  adjust_acc = TRUE, 
-  acc_lower = 0.25, 
-  acc_upper = 0.45
+# estimate all hyper-parameters
+spec$prior$estimate_hyper(
+  S = S + burn, 
+  burn_in = burn, 
+  mu = TRUE, 
+  delta = TRUE, 
+  lambda = TRUE, 
+  psi = TRUE
 )
 ```
 
 
-## Estimation
+
+
+## Setup and hyper-parameters estimation
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
+:::
+
+```{r}
+#| label: prior_plot
+#| warning: false
+#| messages: false
+#| cache: true
+#| fig-align: "center"
+#| fig-height: 11
+#| output-location: column
+
+# assign hyper-parameter names to estimation output
+rownames(spec$prior$hyper) = 
+  c("mu", 
+    "delta", 
+    "lambda", 
+    paste0("psi", 1:3)
+  )
+
+# trace plot
+plot.ts(
+  t(spec$prior$hyper), 
+  main = "Hyper-parameter trace plot",
+  col = "#F500BD", 
+  bty = "n",
+  nc = 1,
+  cex.axis = 2,
+  cex.lab = 2,
+  cex.main = 2
+)
+```
+
+
+## Estimation, Forecasting and Visualisation
+
+::: footer
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
 #| label: estimation
 #| cache: true
-
-# estimation
-p     = 5
-run   = bvar(
-  x, 
-  lags = p, 
-  n_draw = 3e4,
-  n_burn = 1e4,
-  n_thin = 1,
-  priors = priors, 
-  mh = mh, 
-  verbose = TRUE # with progress bar
-)
-
-```
-
-
-
-## Forecasting
-
-::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
-:::
-
-```{r}
-#| label: forecasting
-#| warning: false
 #| fig-align: "center"
-#| out.width: "100%"
-#| output-location: slide
-#| cache: true
+#| fig-height: 11
+#| output-location: column
 
-# forecasting 
-predict(run) <- predict(
-  run, 
-  horizon = 20, 
-  conf_bands = seq(from = 0.05, to = 0.4, by = 0.01)
+# estimate the model
+post = estimate(
+  spec, 
+  S = S,
+  show_progress = FALSE
 )
+
+# forecast
+fore = forecast(post, horizon = 8)
+
+# plot the forecasts
 plot(
-  predict(run), 
-  area = TRUE, 
-  t_back = 32,
-  vars = c("GDPC1")
+  fore, 
+  data_in_plot = 0.5, 
+  probability = 0.68, 
+  col = "#F500BD"
 )
-```
 
-
-
-## Forecasting
-
-::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
-:::
-
-```{r}
-#| label: forecasting-gdpdef
-#| echo: false
-#| warning: false
-#| fig-align: "center"
-#| out.width: "100%"
-#| output-location: slide
-#| cache: true
-
-plot(
-  predict(run), 
-  area = TRUE, 
-  t_back = 32,
-  vars = c("GDPCTPI")
-)
 ```
 
 
 ## Forecasting
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
-:::
-
-```{r}
-#| label: forecasting-ffr
-#| echo: false
-#| warning: false
-#| fig-align: "center"
-#| out.width: "100%"
-#| output-location: slide
-#| cache: true
-
-plot(
-  predict(run), 
-  area = TRUE, 
-  t_back = 32,
-  vars = c("FEDFUNDS")
-)
-```
-
-
-
-## Forecasting
-
-::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
 #| label: 3D-gdp
 #| warning: false
 #| fig-align: "center"
-#| out.width: "100%"
 #| output-location: slide
+#| fig-height: 7
 #| cache: true
 
-Y.h   = aperm(run$fcast$fcast, c(2,3,1))
-h     = dim(Y.h)[1]
+forecasts_prod = fore$forecasts[1,,]
+h           = dim(forecasts_prod)[1]
 
-limits.1    = range(Y.h[,1,])
-point.f     = apply(Y.h[,1,],1,mean)
-interval.f  = apply(Y.h[,1,],1,HDInterval::hdi,credMass=0.90)
+
+limits.1    = range(forecasts_prod)
+
+point.f     = apply(forecasts_prod,1,mean)
+interval.f  = apply(forecasts_prod,1,HDInterval::hdi,credMass=0.90)
 
 x           = seq(from=limits.1[1], to=limits.1[2], length.out=100)
 z           = matrix(NA,h,99)
 for (i in 1:h){
-  z[i,]     = hist(Y.h[i,1,], breaks=x, plot=FALSE)$density
+  z[i,]     = hist(forecasts_prod[i,], breaks=x, plot=FALSE)$density
 }
-x           = hist(Y.h[i,1,], breaks=x, plot=FALSE)$mids
+x           = hist(forecasts_prod[i,], breaks=x, plot=FALSE)$mids
 yy          = 1:h
 z           = t(z)
 
 library(plot3D)
-theta = 180
+theta = 150
 phi   = 15.5
-f4    = persp3D(x=x, y=yy, z=z, phi=phi, theta=theta, xlab="\nrgdp[t+h|t]", ylab="h", zlab="\npredictive densities of rgdp", shade=NA, border=NA, ticktype="detailed", nticks=3,cex.lab=1, col=NA,plot=FALSE)
-perspbox (x=x, y=yy, z=z, bty="f", col.axis="black", phi=phi, theta=theta, xlab="\nrgdp[t+h|t]", ylab="h", zlab="\npredictive densities of rgdp", ticktype="detailed", nticks=3,cex.lab=1, col = NULL, plot = TRUE)
+f4    = persp3D(x=x, y=yy, z=z, phi=phi, theta=theta, xlab="\nproductivity[t+h|t]", ylab="h", zlab="\npredictive densities of productivity", shade=NA, border=NA, ticktype="detailed", nticks=3,cex.lab=1, col=NA,plot=FALSE)
+
+perspbox (x=x, y=yy, z=z, bty="f", col.axis="black", phi=phi, theta=theta, xlab="\nproductivity[t+h|t]", ylab="h", zlab="\npredictive densities of productivity", ticktype="detailed", nticks=3,cex.lab=1, col = NULL, plot = TRUE)
+
 polygon3D(x=c(interval.f[1,],interval.f[2,h:1]), y=c(1:h,h:1), z=rep(0,2*h), col = "#F500BD", NAcol = "white", border = NA, add = TRUE, plot = TRUE)
+
 for (i in 1:h){
   f4.l = trans3d(x=x, y=yy[i], z=z[,i], pmat=f4)
-  lines(f4.l, lwd=0.5, col="black")
+  lines(f4.l, lwd=0.9, col="black")
 }
 f4.l1 = trans3d(x=point.f, y=yy, z=0, pmat=f4)
 lines(f4.l1, lwd=2, col="black")
@@ -1102,26 +1096,10 @@ lines(f4.l1, lwd=2, col="black")
 
 
 
-## MCMC convergence for hyper-parameters
+## MCMC convergence for $\mathbf\Sigma_{1\cdot}$
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
-:::
-
-```{r}
-#| label: mcmc
-#| warning: false
-#| fig-align: "center"
-#| out.width: "100%"
-#| cache: true
-
-plot.ts(run$hyper, main = "", col = "#F500BD", xlab = "s", cex.lab = 2, cex.axis = 1.3)
-```
-
-## MCMC convergence for $\mathbf\Sigma_{\cdot1}$
-
-::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
@@ -1131,13 +1109,13 @@ plot.ts(run$hyper, main = "", col = "#F500BD", xlab = "s", cex.lab = 2, cex.axis
 #| out.width: "100%"
 #| cache: true
 
-plot.ts(run$sigma[,1,], main = "", col = "#F500BD", xlab = "s", cex.lab = 2, cex.axis = 1.3)
+plot.ts(t(post$posterior$Sigma[1,,]), main = "", col = "#F500BD", xlab = "s", cex.lab = 1.3, cex.axis = 1.3, bty = "n")
 ```
 
 ## MCMC convergence for $\boldsymbol\mu_0$
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
@@ -1147,13 +1125,13 @@ plot.ts(run$sigma[,1,], main = "", col = "#F500BD", xlab = "s", cex.lab = 2, cex
 #| out.width: "100%"
 #| cache: true
 
-plot.ts(run$beta[,1,], main = "", col = "#F500BD", xlab = "s", cex.lab = 2, cex.axis = 1.3)
+plot.ts(t(post$posterior$A[,13,]), main = "", col = "#F500BD", xlab = "s", cex.lab = 1.3, cex.axis = 1.3, bty = "n")
 ```
 
 ## Posterior means for $\mathbf{A}$
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
@@ -1162,9 +1140,9 @@ plot.ts(run$beta[,1,], main = "", col = "#F500BD", xlab = "s", cex.lab = 2, cex.
 #| out.width: "100%"
 #| cache: true
 
-mean_A  = t(apply(run$beta, 2:3, mean))
-rownames(mean_A) = colnames(x)
-colnames(mean_A) = c("mu0",paste0("A",1:p %x% rep(1,3)))
+mean_A  = apply(post$posterior$A, 1:2, mean)
+rownames(mean_A) = colnames(optimism[,c(1,2,5)])
+colnames(mean_A) = c(paste0("A",1:4 %x% rep(1,3)),"mu0")
 knitr::kable(mean_A, caption = "Posterior estimates for autoregressive parameters", digits = 2)
 ```
 
@@ -1172,7 +1150,7 @@ knitr::kable(mean_A, caption = "Posterior estimates for autoregressive parameter
 ## Posterior means for $\mathbf\Sigma$
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
@@ -1181,9 +1159,9 @@ knitr::kable(mean_A, caption = "Posterior estimates for autoregressive parameter
 #| out.width: "100%"
 #| cache: true
 
-mean_S  = t(apply(run$sigma, 2:3, mean))
+mean_S  = t(apply(post$posterior$Sigma, 1:2, mean))
 mean_S  = cbind(mean_S, cov2cor(mean_S))
-rownames(mean_S) = colnames(x)
+rownames(mean_S) = colnames(optimism[,c(1,2,5)])
 colnames(mean_S) = c(rep("cov",3),rep("cor",3))
 knitr::kable(mean_S, caption = "Posterior estimates for covariance", digits = 5)
 ```
@@ -1191,7 +1169,7 @@ knitr::kable(mean_S, caption = "Posterior estimates for covariance", digits = 5)
 ## Posterior means for hyper-parameters
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 ```{r}
@@ -1206,12 +1184,13 @@ knitr::kable(mean_h, caption = "Posterior estimates for hyper-parameters", digit
 ```
 
 
+
 ## Australian Data Forecasting
 
 ::: footer
-[Bayesian VARs](https://bayesian-econometrics-2023.github.io/be23-lecture7/)
+[Bayesian VARs](https://bsvars.github.io/2024-10-be24-bsvarSIGNs)
 :::
 
 $$ $$
 
-[DOWNLOAD THE SCRIPT](https://github.com/Bayesian-Econometrics-2023/be23-lecture7/blob/main/be23-AUdata.qmd)
+[DOWNLOAD THE SCRIPT](https://github.com/bsvars/2024-10-be24-bsvarSIGNs/blob/main/be23-AUdata.qmd)

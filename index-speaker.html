@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.361">
 
   <meta name="author" content="by Tomasz Woźniak">
-  <title>Lecture 7: Bayesian Vector Autoregressions</title>
+  <title>Bayesian Vector Autoregressions</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#F500BD" class="quarto-title-block center">
-  <h1 class="title">Lecture 7: Bayesian Vector Autoregressions</h1>
+  <h1 class="title">Bayesian Vector Autoregressions</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -419,10 +419,10 @@ by Tomasz Woźniak
 <section id="materials" class="slide level2" data-background-color="#F500BD">
 <h2>Materials</h2>
 <p><span class="math display">\[ \]</span></p>
-<h3 id="lecture-slides-as-a-website">Lecture Slides <a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">as a Website</a></h3>
+<h3 id="lecture-slides-as-a-website">Lecture Slides <a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">as a Website</a></h3>
 <h3 id="a-dedicated-reading-woźniak-2016-aerev">A Dedicated Reading <a href="https://doi.org/10.1111/1467-8462.12179">Woźniak (2016, AERev)</a></h3>
-<h3 id="quarto-document-template-for-your-own-australian-data-forecasting"><strong>Quarto</strong> <a href="https://github.com/Bayesian-Econometrics-2023/be23-lecture7/blob/main/be23-AUdata.qmd">document template</a> for your own Australian data forecasting</h3>
-<h3 id="github-repo-to-reproduce-the-slides-and-results">GitHub <a href="https://github.com/Bayesian-Econometrics-2023/be23-lecture7">repo</a> to reproduce the slides and results</h3>
+<h3 id="quarto-document-template-for-your-own-australian-data-forecasting"><strong>Quarto</strong> <a href="https://github.com/bsvars/2024-10-be24-bsvarSIGNs/blob/main/be23-AUdata.qmd">document template</a> for your own Australian data forecasting</h3>
+<h3 id="github-repo-to-reproduce-the-slides-and-results">GitHub <a href="https://github.com/bsvars/2024-10-be24-bsvarSIGNs">repo</a> to reproduce the slides and results</h3>
 <h3 id="a-kahoot-quiz">A <a href="https://kahoot.it/">Kahoot!</a> Quiz</h3>
 <h3 id="tasks">Tasks</h3>
 </section>
@@ -455,7 +455,7 @@ by Tomasz Woźniak
 </ul>
 </div>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="varp-model" class="slide level2">
@@ -478,7 +478,7 @@ y_t &amp;= \mathbf{A}_1 y_{t-1} + \dots + \mathbf{A}_p y_{t-p} + \boldsymbol\mu_
 </ul>
 </div>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="a-bivariate-var2-model" class="slide level2">
@@ -493,9 +493,9 @@ y_t &amp;= \mathbf{A}_1 y_{t-1} + \dots + \mathbf{A}_p y_{t-p} + \boldsymbol\mu_
 \end{align*}\]</span>
 <div class="fragment">
 <h3 id="task">Task:</h3>
-<p>Perform the matrix multiplications and write out the equations for <span class="math inline">\(y_{1.t}\)</span> and <span class="math inline">\(y_{2.t}\)</span>.</p>
+<p>Perform the matrix multiplications and write out the equations for <span class="math inline">\(y_{1.t}\)</span>.</p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </div>
 </section>
@@ -519,7 +519,7 @@ MN_{K\times N}\left( M, Q, P \right) &amp;\propto \exp\left\{ -\frac{1}{2}\text{
 <li><span class="math inline">\(\text{tr}()\)</span> is a trace of a matrix - a sum of diagonal elements</li>
 </ul>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="inverse-wishart-distribution" class="slide level2">
@@ -534,7 +534,7 @@ MN_{K\times N}\left( M, Q, P \right) &amp;\propto \exp\left\{ -\frac{1}{2}\text{
 IW_{N}\left( S, \nu \right) \propto \text{det}(\mathbf\Sigma)^{-\frac{\nu+N+1}{2}}\exp\left\{ -\frac{1}{2}\text{tr}\left[ \mathbf\Sigma^{-1} S \right] \right\}
 \end{align*}\]</span>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="normal-inverse-wishart-distribution" class="slide level2">
@@ -552,7 +552,7 @@ NIW_{K\times N}\left( M,P,S,\nu\right) \propto &amp;\text{det}(\mathbf{\Sigma})^
 &amp;\times\exp\left\{ -\frac{1}{2}\text{tr}\left[ \mathbf{\Sigma}^{-1} (\mathbf{A}-M)'P^{-1}(\mathbf{A}-M) \right] \right\}
 \end{align*}\]</span>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="example-error-term-distribution" class="slide level2">
@@ -573,7 +573,7 @@ E|X &amp;\sim MN_{T\times N}\left(\mathbf{0}_{T\times N},\mathbf\Sigma, I_T\righ
 </ul>
 </div>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="example-univariate-inverse-wishart-distribution" class="slide level2">
@@ -595,7 +595,7 @@ E|X &amp;\sim MN_{T\times N}\left(\mathbf{0}_{T\times N},\mathbf\Sigma, I_T\righ
 </ul>
 </div>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="bayesian-estimation-1" class="slide level2" data-background-color="#F500BD">
@@ -623,7 +623,7 @@ E|X &amp;\sim MN_{T\times N}\left(\mathbf{0}_{T\times N},\mathbf\Sigma, I_T\righ
 \]</span> where <span class="math inline">\(K=pN+1\)</span></p>
 </div>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="the-model-as-predictive-density" class="slide level2">
@@ -638,7 +638,7 @@ E|X &amp;\sim MN_{T\times N}\left(\mathbf{0}_{T\times N},\mathbf\Sigma, I_T\righ
 Y|X,\mathbf{A}, \mathbf{\Sigma} &amp;\sim MN_{T\times N}\left(X\mathbf{A},\mathbf{\Sigma},I_T\right)
 \end{align*}\]</span>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="likelihood-function" class="slide level2">
@@ -652,7 +652,7 @@ Y|X,\mathbf{A}, \mathbf{\Sigma} &amp;\sim MN_{T\times N}\left(X\mathbf{A},\mathb
 L\left(\mathbf{A},\mathbf{\Sigma}|Y,X\right)&amp;\propto\text{det}(\mathbf{\Sigma})^{-\frac{T}{2}}\exp\left\{-\frac{1}{2}\text{tr}\left[\mathbf{\Sigma}^{-1}(Y-X\mathbf{A})'(Y-X\mathbf{A})\right]\right\}
 \end{align*}\]</span>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="likelihood-function-as-niw" class="slide level2">
@@ -670,7 +670,7 @@ L\left(\mathbf{A},\mathbf{\Sigma}|Y,X\right)&amp;\propto\text{det}(\mathbf{\Sigm
 L\left( \mathbf{A},\mathbf{\Sigma}|Y,X \right) &amp;= NIW_{K\times N}\left(\widehat{A},(X'X)^{-1},(Y-X\widehat{A})'(Y-X\widehat{A}), T-N-K-1 \right)
 \end{align*}\]</span>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="prior-distribution" class="slide level2">
@@ -689,7 +689,7 @@ p\left( \mathbf{A},\mathbf{\Sigma} \right)
 &amp;\quad\times \exp\left\{ -\frac{1}{2}\text{tr}\left[ \mathbf{\Sigma}^{-1}\underline{S} \right] \right\}
 \end{align*}\]</span>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="posterior-distribution" class="slide level2">
@@ -707,7 +707,7 @@ p\left( \mathbf{A},\mathbf{\Sigma} |Y,X\right)
 &amp;\quad\times\exp\left\{ -\frac{1}{2}\text{tr}\left[ \mathbf{\Sigma}^{-1}(\mathbf{A}-\underline{A})'\underline{V}^{-1}(\mathbf{A}-\underline{A}) \right] \right\}
 \end{align*}\]</span>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="joint-posterior-distribution" class="slide level2">
@@ -726,7 +726,25 @@ p(\mathbf{\Sigma}|Y,X) &amp;= IW_N\left( \overline{S}, \overline{\nu} \right)
 \overline{S}&amp;= \underline{S}+Y'Y + \underline{A}'\underline{V}^{-1}\underline{A} - \overline{A}'\overline{V}^{-1}\overline{A}
 \end{align*}\]</span>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
+</div>
+</section>
+<section id="joint-posterior-distribution-1" class="slide level2">
+<h2>Joint Posterior Distribution</h2>
+<h3 id="task.">Task.</h3>
+<ul>
+<li>Derive the full conditional posterior distribution of <span class="math inline">\(\mathbf{A}\)</span> given <span class="math inline">\(\mathbf{\Sigma}\)</span> and data <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>, denoted by <span class="math inline">\(p(\mathbf{A}|Y,X,\mathbf{\Sigma})\)</span></li>
+</ul>
+<p><span class="math display">\[ \]</span></p>
+<p>Hint: Proceed by:</p>
+<ul>
+<li>writing out the kernel of this distribution as a product of the likelihood and the prior,</li>
+<li>collecting all the terms within the exponential function and under the trace operator,</li>
+<li>completing the squares,</li>
+<li>applying the conditioning whenever convenient.</li>
+</ul>
+<div class="footer">
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="posterior-mean-of-mathbfa" class="slide level2">
@@ -735,13 +753,13 @@ p(\mathbf{\Sigma}|Y,X) &amp;= IW_N\left( \overline{S}, \overline{\nu} \right)
 \overline{A} &amp;= \overline{V}\left( X'Y + \underline{V}^{-1}\underline{A} \right)\\[2ex]
 &amp;= \overline{V}\left( X'X\widehat{A} + \underline{V}^{-1}\underline{A} \right)\\[2ex]
 &amp;= \overline{V} X'X\widehat{A} + \overline{V}\underline{V}^{-1}\underline{A}
-\end{align*}\]</span> <font color="FF00FF">a linear combination</font> of the MLE <span class="math inline">\(\widehat{A}\)</span> and the prior mean <span class="math inline">\(\underline{A}\)</span></p>
+\end{align*}\]</span> <font color="F500BD">a linear combination</font> of the MLE <span class="math inline">\(\widehat{A}\)</span> and the prior mean <span class="math inline">\(\underline{A}\)</span></p>
 <p>Note that: <span class="math display">\[
 \overline{V} X'X + \overline{V}\underline{V}^{-1} = \overline{V} ( X'X + \underline{V}^{-1}) = I_K
 \]</span></p>
 <p><a href="https://rpsychologist.com/d3/bayes/" data-preview-link="true">Play with the posterior in an interactive graph</a></p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="marginal-data-density" class="slide level2">
@@ -756,7 +774,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}| data \right) = MNIW\left(\overline{A},\over
 <p>and so is the analytical formula for the <em>MDD</em>: <span class="math display">\[p(data)\]</span></p>
 <p>This can be used to our advantage!</p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="minnesota-and-dummy-observations-prior-1" class="slide level2" data-background-color="#F500BD">
@@ -773,7 +791,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}| data \right) = MNIW\left(\overline{A},\over
 <li>the effect of other variables lags should be less than that of own lags</li>
 </ul>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </div>
 </section>
@@ -796,7 +814,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}| data \right) = MNIW\left(\overline{A},\over
 <h3 id="hyper-parameters.">Hyper-parameters.</h3>
 <p><span class="math inline">\(\psi =(\psi_1, \dots, \psi_N)\)</span> have to be chosen (or estimated)</p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="minnesota-prior-2" class="slide level2">
@@ -805,18 +823,28 @@ p\left( \mathbf{A}, \mathbf{\Sigma}| data \right) = MNIW\left(\overline{A},\over
 <span class="math display">\[\begin{align*}
 \mathbf{A}|\mathbf{\Sigma} &amp;\sim MN_{K\times N}\left( \underline{A},\mathbf{\Sigma},\underline{V} \right)
 \end{align*}\]</span>
-<p>Set <span class="math display">\[\begin{align*}
+<p>For <span class="math inline">\(\quad l = 1+\text{floor}((i-1)/N) \quad\text{and }\quad k = i - (l-1)N\)</span>, set: <span class="math display">\[\begin{align*}
 \underline{A} &amp;= \begin{bmatrix} I_N \\ \mathbf{0}_{((p-1)N +1)\times N}\end{bmatrix}&amp;
 \underline{V}_{ij} &amp;= \left\{\begin{array} (\lambda ^ 2 / (\psi_k l^2) &amp;\text{ for }i=j,\text{ and } i\neq pN+1 \\
 \lambda^2 &amp;\text{ for }i=j,\text{ and } i= pN+1 \\
 0&amp;\text{ for } i\neq j
 \end{array}\right.
 \end{align*}\]</span></p>
-<p>for <span class="math inline">\(\quad l = 1+\text{floor}((i-1)/N) \quad\text{and }\quad k = i - (l-1)N\)</span></p>
 <h3 id="hyper-parameters.-1">Hyper-parameters.</h3>
 <p><span class="math inline">\(\lambda^2\)</span> has to be chosen (or estimated)</p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
+</div>
+</section>
+<section id="minnesota-prior-3" class="slide level2">
+<h2>Minnesota Prior</h2>
+<h3 id="task.-1">Task.</h3>
+<p>Consider a simple case of a model for <span class="math inline">\(N=2\)</span> observations and with <span class="math inline">\(p=1\)</span> lag.</p>
+<ul>
+<li>write out the <span class="math inline">\(3\times2\)</span> matrix <span class="math inline">\(\underline{A}\)</span> and the <span class="math inline">\(3\times3\)</span> matrix <span class="math inline">\(\underline{V}\)</span> for the Minnesota prior determining every of its elements.</li>
+</ul>
+<div class="footer">
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="dummy-observations-prior" class="slide level2">
@@ -839,7 +867,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y^*,X^* \right) &amp;= MNIV_{K\times N}\left
 \end{align*}\]</span></p>
 </div>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="dummy-observations-prior-1" class="slide level2">
@@ -850,7 +878,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y^*,X^* \right) &amp;= MNIV_{K\times N}\left
 <!-- -->
 <h3 id="sum-of-coefficients-prior.">Sum-of-coefficients prior.</h3>
 <p>Generate additional <span class="math inline">\(N\)</span> rows by <span class="math display">\[
-Y^+ = \text{diag}\left(\frac{\bar{Y}_0}{\mu}\right) \quad\text{ and }\quad X^+ = \begin{bmatrix}\mathbf{0}_N &amp; Y^+ &amp; \dots &amp; Y^+ \end{bmatrix}
+Y^+ = \text{diag}\left(\frac{\bar{Y}_0}{\mu}\right) \quad\text{ and }\quad X^+ = \begin{bmatrix}Y^+ &amp; \dots &amp; Y^+ &amp; \mathbf{0}_N \end{bmatrix}
 \]</span></p>
 <ul>
 <li><span class="math inline">\(\mu\)</span> is a hyper-parameter to be chosen (or estimated)</li>
@@ -859,14 +887,14 @@ Y^+ = \text{diag}\left(\frac{\bar{Y}_0}{\mu}\right) \quad\text{ and }\quad X^+ =
 </ul>
 </div>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="dummy-observations-prior-2" class="slide level2">
 <h2>Dummy Observations Prior</h2>
 <h3 id="dummy-initial-observation-prior.">Dummy-initial-observation prior.</h3>
 <p>Generate an additional row by <span class="math display">\[
-Y^{++} = \frac{\bar{Y}_0'}{\delta} \quad\text{ and }\quad X^{++} = \begin{bmatrix}\frac{1}{\delta} &amp; Y^{++} &amp; \dots &amp; Y^{++} \end{bmatrix}
+Y^{++} = \frac{\bar{Y}_0'}{\delta} \quad\text{ and }\quad X^{++} = \begin{bmatrix} Y^{++} &amp; \dots &amp; Y^{++} &amp; \frac{1}{\delta} \end{bmatrix}
 \]</span></p>
 <ul>
 <li>hyper-parameter <span class="math inline">\(\delta\)</span> is to be chosen (or estimated)</li>
@@ -882,12 +910,12 @@ X^* = \begin{bmatrix}X^+ \\ X^{++} \end{bmatrix}
 \]</span></p>
 </div>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="dummy-observations-prior-3" class="slide level2">
 <h2>Dummy Observations Prior</h2>
-<h3 id="task.">Task.</h3>
+<h3 id="task.-2">Task.</h3>
 <p>Suppose that:</p>
 <ul>
 <li><span class="math inline">\(\bar{Y}_0 = \begin{bmatrix}1&amp;2\end{bmatrix}'\)</span></li>
@@ -897,7 +925,7 @@ X^* = \begin{bmatrix}X^+ \\ X^{++} \end{bmatrix}
 </ul>
 <p>Write out the matrices <span class="math inline">\(Y^*\)</span> and <span class="math inline">\(X^*\)</span> of dimensions <span class="math inline">\(2\times 3\)</span> and <span class="math inline">\(3\times 3\)</span> respectively.</p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="bayesian-estimation-for-hierarchical-prior-1" class="slide level2" data-background-color="#F500BD">
@@ -917,7 +945,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y^*,X^*,\psi,\lambda,\mu,\delta \right) &amp
 \delta &amp;\sim G\left(1,2\right)
 \end{align*}\]</span></p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="bayesian-estimation-for-hierarchical-prior-3" class="slide level2">
@@ -931,7 +959,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y^*,X^*,\psi,\lambda,\mu,\delta \right) &amp
 </ul>
 <p><span class="math display">\[ p(\psi,\lambda,\mu,\delta|data) \propto p(\psi,\lambda,\mu,\delta)p(data|\psi,\lambda,\mu,\delta)\]</span> - Use an <span class="math inline">\((N+3)\)</span>-variate Student-t distribution as the candidate generating density</p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="bayesian-estimation-for-hierarchical-prior-4" class="slide level2">
@@ -946,9 +974,9 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y,X, Y^*,X^* \right) &amp;= MNIW_{K\times N}
 \overline{S}^*&amp;= \underline{S}^*+Y'Y + \underline{A}^{*\prime}\underline{V}^{*-1}\underline{A}^* - \overline{A}^{*\prime}\overline{V}^{*-1}\overline{A}^*
 \end{align*}\]</span>
 <h3 id="r-implementation.">R implementation.</h3>
-<p>Package <a href="https://cran.r-project.org/web/packages/BVAR/index.html"><strong>BVAR</strong></a> by <a href="https://doi.org/10.1162%2FREST_a_00483">Kuschnig, Vashold (2021)</a> implements this algorithm.</p>
+<p>Package <a href="https://cran.r-project.org/package=bsvarSIGNs"><strong>bsvarSIGNs</strong></a> by <a href="https://doi.org/10.32614/CRAN.package.bsvarSIGNs">Wang &amp; Woźniak (2024)</a> implements this algorithm.</p>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 </section>
 <section id="bayesian-forecasting-using-vars-1" class="slide level2" data-background-color="#F500BD">
@@ -957,7 +985,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y,X, Y^*,X^* \right) &amp;= MNIW_{K\times N}
 <section id="the-objective-of-economic-forecasting" class="slide level2">
 <h2>The objective of economic forecasting</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 <p><span class="math inline">\(\left.\right.\)</span></p>
 <p>… is to use the available data to provide a statistical characterisation of the unknown future values of quantities of interest.</p>
@@ -971,7 +999,7 @@ p\left( \mathbf{A}, \mathbf{\Sigma}|Y,X, Y^*,X^* \right) &amp;= MNIW_{K\times N}
 <section id="one-period-ahead-predictive-density" class="slide level2">
 <h2>One-Period Ahead Predictive Density</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 <h3 id="varp-model.-1">VAR(p) model.</h3>
 <p><span class="math display">\[\begin{align*}
@@ -987,7 +1015,7 @@ y_{t+h}|Y_{t+h-1},\mathbf{A},\mathbf\Sigma &amp;\sim N_N\left(\mathbf{A}_1 y_{t+
 <section id="one-period-ahead-predictive-density-1" class="slide level2">
 <h2>One-Period Ahead Predictive Density</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 <p><span class="math inline">\(\left.\right.\)</span></p>
 <p>Bayesian forecasting takes into account the uncertainty w.r.t. parameter estimation by integrating it out from the predictive density.</p>
@@ -1004,7 +1032,7 @@ p(y_{T+1}|Y,X) &amp;= \int p(y_{T+1}|Y_{T},\mathbf{A},\mathbf\Sigma) p(\mathbf{A
 <section id="sampling-from-one-period-ahead-predictive-density" class="slide level2">
 <h2>Sampling from One-Period Ahead Predictive Density</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 <p><span class="math inline">\(\left.\right.\)</span></p>
 <h4 id="step-1-sample-from-the-posterior">Step 1: Sample from the posterior</h4>
@@ -1019,7 +1047,7 @@ N_N\left(\mathbf{A}_1^{(s)} y_{T} + \dots + \mathbf{A}_p^{(s)} y_{T-p+1} + \bold
 <section id="h-period-ahead-predictive-density" class="slide level2">
 <h2><span class="math inline">\(h\)</span>-Period Ahead Predictive Density</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 <p><span class="math inline">\(\left.\right.\)</span></p>
 <p>This procedure can be generalised to any forecasting horizon.</p>
@@ -1034,7 +1062,7 @@ p(y_{T+2},y_{T+1}|Y,X)
 <section id="h-period-ahead-predictive-density-1" class="slide level2">
 <h2><span class="math inline">\(h\)</span>-Period Ahead Predictive Density</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 <p><span class="math inline">\(\left.\right.\)</span></p>
 <h4 id="step-1-sample-from-the-posterior-1">Step 1: Sample from the posterior</h4>
@@ -1049,44 +1077,31 @@ N_N\left(\mathbf{A}_1^{(s)} y_{T+1}^{(s)} + \mathbf{A}_2 y_{T} + \dots + \mathbf
 \]</span></p>
 <p>and obtain <span class="math inline">\(\left\{y_{T+2}^{(s)},y_{T+1}^{(s)}\right\}_{s=1}^{S}\)</span></p>
 </section>
-<section id="the-bayesian-vars-quiz" class="slide level2">
-<h2>The Bayesian VARs Quiz</h2>
-<p><span class="math display">\[ \]</span></p>
-<p><a href="https://kahoot.it">GO TO THE GAME</a></p>
-<div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
-</div>
+<section id="us-data-analysis-using-r-package-bsvarsigns-1" class="slide level2" data-background-color="#F500BD">
+<h2>US Data Analysis Using R Package bsvarSIGNs</h2>
 </section>
-<section id="us-data-analysis-using-r-package-bvar" class="slide level2" data-background-color="#F500BD">
-<h2>US Data Analysis Using R Package BVAR</h2>
-</section>
-<section id="data-preparation" class="slide level2">
-<h2>Data preparation</h2>
+<section id="data" class="slide level2">
+<h2>Data</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
-<div class="cell columns column-output-location" data-layout-align="center" data-hash="index_cache/revealjs/us-data_80b010f44ca909f99652045baf76b1e4">
+<div class="cell columns column-output-location" data-layout-align="center" data-hash="index_cache/revealjs/us-data_2bd2f74c8e7fec2d7a47aca4149fee97">
 <div class="column">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(BVAR)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># upload package</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(bsvarSIGNs)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># data</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>x <span class="ot">=</span> fred_qd[, <span class="fu">c</span>(<span class="st">"GDPC1"</span>, </span>
-<span id="cb1-6"><a href="#cb1-6"></a>                <span class="st">"GDPCTPI"</span>, </span>
-<span id="cb1-7"><a href="#cb1-7"></a>                <span class="st">"FEDFUNDS"</span>)]</span>
-<span id="cb1-8"><a href="#cb1-8"></a>x <span class="ot">=</span> <span class="fu">fred_transform</span>(</span>
-<span id="cb1-9"><a href="#cb1-9"></a>  x, </span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="at">codes =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>)</span>
-<span id="cb1-11"><a href="#cb1-11"></a>)</span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="fu">plot.ts</span>(</span>
-<span id="cb1-14"><a href="#cb1-14"></a>  x, </span>
-<span id="cb1-15"><a href="#cb1-15"></a>  <span class="at">main =</span> <span class="st">""</span>,</span>
-<span id="cb1-16"><a href="#cb1-16"></a>  <span class="at">col =</span> <span class="st">"#F500BD"</span>,</span>
-<span id="cb1-17"><a href="#cb1-17"></a>  <span class="at">lwd =</span> <span class="dv">4</span>,</span>
-<span id="cb1-18"><a href="#cb1-18"></a>  <span class="at">cex.axis =</span> <span class="dv">2</span>,</span>
-<span id="cb1-19"><a href="#cb1-19"></a>  <span class="at">cex.lab =</span> <span class="dv">2</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># upload data</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">data</span>(optimism)</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># plot data</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">plot.ts</span>(</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  optimism[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)], </span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="at">main =</span> <span class="st">""</span>,</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="at">col =</span> <span class="st">"#F500BD"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>  <span class="at">lwd =</span> <span class="dv">4</span>,</span>
+<span id="cb1-13"><a href="#cb1-13"></a>  <span class="at">cex.axis =</span> <span class="dv">2</span>,</span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="at">cex.lab =</span> <span class="dv">2</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1098,545 +1113,205 @@ N_N\left(\mathbf{A}_1^{(s)} y_{T+1}^{(s)} + \mathbf{A}_2 y_{T} + \dots + \mathbf
 </div>
 </div>
 </section>
-<section id="prior-setup" class="slide level2">
-<h2>Prior setup</h2>
+<section id="setup-and-hyper-parameters-estimation" class="slide level2">
+<h2>Setup and hyper-parameters estimation</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
-<div class="cell" data-hash="index_cache/revealjs/priors_cc402956eebe8496bbd618918bdf7e05">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># priors</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>mn      <span class="ot">=</span> <span class="fu">bv_minnesota</span>(</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="at">lambda =</span> <span class="fu">bv_lambda</span>(<span class="at">mode =</span> <span class="fl">0.2</span>, <span class="at">sd =</span> <span class="fl">0.4</span>, <span class="at">min =</span> <span class="fl">0.0001</span>, <span class="at">max =</span> <span class="dv">5</span>),</span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="at">alpha =</span> <span class="fu">bv_alpha</span>(<span class="at">mode =</span> <span class="dv">2</span>), </span>
-<span id="cb2-5"><a href="#cb2-5"></a>  psi <span class="ot">&lt;-</span> <span class="fu">bv_psi</span>(<span class="at">scale =</span> <span class="fl">0.004</span>, <span class="at">shape =</span> <span class="fl">0.004</span>, <span class="at">mode =</span> <span class="st">"auto"</span>, <span class="at">min =</span> <span class="st">"auto"</span>, <span class="at">max =</span> <span class="st">"auto"</span>),</span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="at">var =</span> <span class="fl">1e07</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>)</span>
-<span id="cb2-8"><a href="#cb2-8"></a></span>
-<span id="cb2-9"><a href="#cb2-9"></a>soc     <span class="ot">=</span> <span class="fu">bv_soc</span>(<span class="at">mode =</span> <span class="dv">1</span>, <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">min =</span> <span class="fl">1e-04</span>, <span class="at">max =</span> <span class="dv">50</span>)</span>
-<span id="cb2-10"><a href="#cb2-10"></a>sur     <span class="ot">=</span> <span class="fu">bv_sur</span>(<span class="at">mode =</span> <span class="dv">1</span>, <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">min =</span> <span class="fl">1e-04</span>, <span class="at">max =</span> <span class="dv">50</span>)</span>
-<span id="cb2-11"><a href="#cb2-11"></a></span>
-<span id="cb2-12"><a href="#cb2-12"></a>priors  <span class="ot">=</span> <span class="fu">bv_priors</span>(<span class="at">hyper =</span> <span class="st">"auto"</span>, <span class="at">mn =</span> mn, <span class="at">soc =</span> soc, <span class="at">sur =</span> sur)</span>
+<div class="cell" data-messages="false" data-hash="index_cache/revealjs/priors_209072debd4253b48e2e9f159ece5014">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># set seed</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># MCMC settings</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>burn <span class="ot">=</span> <span class="dv">1000</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>S    <span class="ot">=</span> <span class="dv">10000</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># specify the model</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>spec <span class="ot">=</span> specify_bsvarSIGN<span class="sc">$</span><span class="fu">new</span>(</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  optimism[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)],</span>
+<span id="cb2-11"><a href="#cb2-11"></a>  <span class="at">p        =</span> <span class="dv">4</span>,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>)</span>
 <span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># MH setup</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>mh      <span class="ot">=</span> <span class="fu">bv_metropolis</span>(</span>
-<span id="cb2-16"><a href="#cb2-16"></a>  <span class="at">scale_hess =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.0001</span>, <span class="fl">0.0001</span>),</span>
-<span id="cb2-17"><a href="#cb2-17"></a>  <span class="at">adjust_acc =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb2-18"><a href="#cb2-18"></a>  <span class="at">acc_lower =</span> <span class="fl">0.25</span>, </span>
-<span id="cb2-19"><a href="#cb2-19"></a>  <span class="at">acc_upper =</span> <span class="fl">0.45</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># estimate all hyper-parameters</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>spec<span class="sc">$</span>prior<span class="sc">$</span><span class="fu">estimate_hyper</span>(</span>
+<span id="cb2-16"><a href="#cb2-16"></a>  <span class="at">S =</span> S <span class="sc">+</span> burn, </span>
+<span id="cb2-17"><a href="#cb2-17"></a>  <span class="at">burn_in =</span> burn, </span>
+<span id="cb2-18"><a href="#cb2-18"></a>  <span class="at">mu =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb2-19"><a href="#cb2-19"></a>  <span class="at">delta =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb2-20"><a href="#cb2-20"></a>  <span class="at">lambda =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb2-21"><a href="#cb2-21"></a>  <span class="at">psi =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>**************************************************|
+ Adaptive Metropolis MCMC: hyper parameters       |
+**************************************************|</code></pre>
+</div>
 </div>
 </section>
-<section id="estimation" class="slide level2">
-<h2>Estimation</h2>
+<section id="setup-and-hyper-parameters-estimation-1" class="slide level2">
+<h2>Setup and hyper-parameters estimation</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
-<div class="cell" data-hash="index_cache/revealjs/estimation_59349bc081c9a7bbaf8bf924c74a9934">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># estimation</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>p     <span class="ot">=</span> <span class="dv">5</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>run   <span class="ot">=</span> <span class="fu">bvar</span>(</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  x, </span>
-<span id="cb3-5"><a href="#cb3-5"></a>  <span class="at">lags =</span> p, </span>
-<span id="cb3-6"><a href="#cb3-6"></a>  <span class="at">n_draw =</span> <span class="fl">3e4</span>,</span>
-<span id="cb3-7"><a href="#cb3-7"></a>  <span class="at">n_burn =</span> <span class="fl">1e4</span>,</span>
-<span id="cb3-8"><a href="#cb3-8"></a>  <span class="at">n_thin =</span> <span class="dv">1</span>,</span>
-<span id="cb3-9"><a href="#cb3-9"></a>  <span class="at">priors =</span> priors, </span>
-<span id="cb3-10"><a href="#cb3-10"></a>  <span class="at">mh =</span> mh, </span>
-<span id="cb3-11"><a href="#cb3-11"></a>  <span class="at">verbose =</span> <span class="cn">TRUE</span> <span class="co"># with progress bar</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Optimisation concluded.
-Posterior marginal likelihood: 1450.246
-Hyperparameters: lambda = 1.89602; soc = 0.19593; sur = 0.61619
-
-  |                                                                            
-  |                                                                      |   0%
-  |                                                                            
-  |                                                                      |   1%
-  |                                                                            
-  |=                                                                     |   1%
-  |                                                                            
-  |=                                                                     |   2%
-  |                                                                            
-  |==                                                                    |   2%
-  |                                                                            
-  |==                                                                    |   3%
-  |                                                                            
-  |==                                                                    |   4%
-  |                                                                            
-  |===                                                                   |   4%
-  |                                                                            
-  |===                                                                   |   5%
-  |                                                                            
-  |====                                                                  |   5%
-  |                                                                            
-  |====                                                                  |   6%
-  |                                                                            
-  |=====                                                                 |   6%
-  |                                                                            
-  |=====                                                                 |   7%
-  |                                                                            
-  |=====                                                                 |   8%
-  |                                                                            
-  |======                                                                |   8%
-  |                                                                            
-  |======                                                                |   9%
-  |                                                                            
-  |=======                                                               |   9%
-  |                                                                            
-  |=======                                                               |  10%
-  |                                                                            
-  |=======                                                               |  11%
-  |                                                                            
-  |========                                                              |  11%
-  |                                                                            
-  |========                                                              |  12%
-  |                                                                            
-  |=========                                                             |  12%
-  |                                                                            
-  |=========                                                             |  13%
-  |                                                                            
-  |=========                                                             |  14%
-  |                                                                            
-  |==========                                                            |  14%
-  |                                                                            
-  |==========                                                            |  15%
-  |                                                                            
-  |===========                                                           |  15%
-  |                                                                            
-  |===========                                                           |  16%
-  |                                                                            
-  |============                                                          |  16%
-  |                                                                            
-  |============                                                          |  17%
-  |                                                                            
-  |============                                                          |  18%
-  |                                                                            
-  |=============                                                         |  18%
-  |                                                                            
-  |=============                                                         |  19%
-  |                                                                            
-  |==============                                                        |  19%
-  |                                                                            
-  |==============                                                        |  20%
-  |                                                                            
-  |==============                                                        |  21%
-  |                                                                            
-  |===============                                                       |  21%
-  |                                                                            
-  |===============                                                       |  22%
-  |                                                                            
-  |================                                                      |  22%
-  |                                                                            
-  |================                                                      |  23%
-  |                                                                            
-  |================                                                      |  24%
-  |                                                                            
-  |=================                                                     |  24%
-  |                                                                            
-  |=================                                                     |  25%
-  |                                                                            
-  |==================                                                    |  25%
-  |                                                                            
-  |==================                                                    |  26%
-  |                                                                            
-  |===================                                                   |  26%
-  |                                                                            
-  |===================                                                   |  27%
-  |                                                                            
-  |===================                                                   |  28%
-  |                                                                            
-  |====================                                                  |  28%
-  |                                                                            
-  |====================                                                  |  29%
-  |                                                                            
-  |=====================                                                 |  29%
-  |                                                                            
-  |=====================                                                 |  30%
-  |                                                                            
-  |=====================                                                 |  31%
-  |                                                                            
-  |======================                                                |  31%
-  |                                                                            
-  |======================                                                |  32%
-  |                                                                            
-  |=======================                                               |  32%
-  |                                                                            
-  |=======================                                               |  33%
-  |                                                                            
-  |=======================                                               |  34%
-  |                                                                            
-  |========================                                              |  34%
-  |                                                                            
-  |========================                                              |  35%
-  |                                                                            
-  |=========================                                             |  35%
-  |                                                                            
-  |=========================                                             |  36%
-  |                                                                            
-  |==========================                                            |  36%
-  |                                                                            
-  |==========================                                            |  37%
-  |                                                                            
-  |==========================                                            |  38%
-  |                                                                            
-  |===========================                                           |  38%
-  |                                                                            
-  |===========================                                           |  39%
-  |                                                                            
-  |============================                                          |  39%
-  |                                                                            
-  |============================                                          |  40%
-  |                                                                            
-  |============================                                          |  41%
-  |                                                                            
-  |=============================                                         |  41%
-  |                                                                            
-  |=============================                                         |  42%
-  |                                                                            
-  |==============================                                        |  42%
-  |                                                                            
-  |==============================                                        |  43%
-  |                                                                            
-  |==============================                                        |  44%
-  |                                                                            
-  |===============================                                       |  44%
-  |                                                                            
-  |===============================                                       |  45%
-  |                                                                            
-  |================================                                      |  45%
-  |                                                                            
-  |================================                                      |  46%
-  |                                                                            
-  |=================================                                     |  46%
-  |                                                                            
-  |=================================                                     |  47%
-  |                                                                            
-  |=================================                                     |  48%
-  |                                                                            
-  |==================================                                    |  48%
-  |                                                                            
-  |==================================                                    |  49%
-  |                                                                            
-  |===================================                                   |  49%
-  |                                                                            
-  |===================================                                   |  50%
-  |                                                                            
-  |===================================                                   |  51%
-  |                                                                            
-  |====================================                                  |  51%
-  |                                                                            
-  |====================================                                  |  52%
-  |                                                                            
-  |=====================================                                 |  52%
-  |                                                                            
-  |=====================================                                 |  53%
-  |                                                                            
-  |=====================================                                 |  54%
-  |                                                                            
-  |======================================                                |  54%
-  |                                                                            
-  |======================================                                |  55%
-  |                                                                            
-  |=======================================                               |  55%
-  |                                                                            
-  |=======================================                               |  56%
-  |                                                                            
-  |========================================                              |  56%
-  |                                                                            
-  |========================================                              |  57%
-  |                                                                            
-  |========================================                              |  58%
-  |                                                                            
-  |=========================================                             |  58%
-  |                                                                            
-  |=========================================                             |  59%
-  |                                                                            
-  |==========================================                            |  59%
-  |                                                                            
-  |==========================================                            |  60%
-  |                                                                            
-  |==========================================                            |  61%
-  |                                                                            
-  |===========================================                           |  61%
-  |                                                                            
-  |===========================================                           |  62%
-  |                                                                            
-  |============================================                          |  62%
-  |                                                                            
-  |============================================                          |  63%
-  |                                                                            
-  |============================================                          |  64%
-  |                                                                            
-  |=============================================                         |  64%
-  |                                                                            
-  |=============================================                         |  65%
-  |                                                                            
-  |==============================================                        |  65%
-  |                                                                            
-  |==============================================                        |  66%
-  |                                                                            
-  |===============================================                       |  66%
-  |                                                                            
-  |===============================================                       |  67%
-  |                                                                            
-  |===============================================                       |  68%
-  |                                                                            
-  |================================================                      |  68%
-  |                                                                            
-  |================================================                      |  69%
-  |                                                                            
-  |=================================================                     |  69%
-  |                                                                            
-  |=================================================                     |  70%
-  |                                                                            
-  |=================================================                     |  71%
-  |                                                                            
-  |==================================================                    |  71%
-  |                                                                            
-  |==================================================                    |  72%
-  |                                                                            
-  |===================================================                   |  72%
-  |                                                                            
-  |===================================================                   |  73%
-  |                                                                            
-  |===================================================                   |  74%
-  |                                                                            
-  |====================================================                  |  74%
-  |                                                                            
-  |====================================================                  |  75%
-  |                                                                            
-  |=====================================================                 |  75%
-  |                                                                            
-  |=====================================================                 |  76%
-  |                                                                            
-  |======================================================                |  76%
-  |                                                                            
-  |======================================================                |  77%
-  |                                                                            
-  |======================================================                |  78%
-  |                                                                            
-  |=======================================================               |  78%
-  |                                                                            
-  |=======================================================               |  79%
-  |                                                                            
-  |========================================================              |  79%
-  |                                                                            
-  |========================================================              |  80%
-  |                                                                            
-  |========================================================              |  81%
-  |                                                                            
-  |=========================================================             |  81%
-  |                                                                            
-  |=========================================================             |  82%
-  |                                                                            
-  |==========================================================            |  82%
-  |                                                                            
-  |==========================================================            |  83%
-  |                                                                            
-  |==========================================================            |  84%
-  |                                                                            
-  |===========================================================           |  84%
-  |                                                                            
-  |===========================================================           |  85%
-  |                                                                            
-  |============================================================          |  85%
-  |                                                                            
-  |============================================================          |  86%
-  |                                                                            
-  |=============================================================         |  86%
-  |                                                                            
-  |=============================================================         |  87%
-  |                                                                            
-  |=============================================================         |  88%
-  |                                                                            
-  |==============================================================        |  88%
-  |                                                                            
-  |==============================================================        |  89%
-  |                                                                            
-  |===============================================================       |  89%
-  |                                                                            
-  |===============================================================       |  90%
-  |                                                                            
-  |===============================================================       |  91%
-  |                                                                            
-  |================================================================      |  91%
-  |                                                                            
-  |================================================================      |  92%
-  |                                                                            
-  |=================================================================     |  92%
-  |                                                                            
-  |=================================================================     |  93%
-  |                                                                            
-  |=================================================================     |  94%
-  |                                                                            
-  |==================================================================    |  94%
-  |                                                                            
-  |==================================================================    |  95%
-  |                                                                            
-  |===================================================================   |  95%
-  |                                                                            
-  |===================================================================   |  96%
-  |                                                                            
-  |====================================================================  |  96%
-  |                                                                            
-  |====================================================================  |  97%
-  |                                                                            
-  |====================================================================  |  98%
-  |                                                                            
-  |===================================================================== |  98%
-  |                                                                            
-  |===================================================================== |  99%
-  |                                                                            
-  |======================================================================|  99%
-  |                                                                            
-  |======================================================================| 100%
-Finished MCMC after 7.89 secs.</code></pre>
+<div class="cell columns column-output-location" data-layout-align="center" data-messages="false" data-hash="index_cache/revealjs/prior_plot_2a4107165fc47dcc8fefdb8c1a8283cf">
+<div class="column">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># assign hyper-parameter names to estimation output</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">rownames</span>(spec<span class="sc">$</span>prior<span class="sc">$</span>hyper) <span class="ot">=</span> </span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">c</span>(<span class="st">"mu"</span>, </span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="st">"delta"</span>, </span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="st">"lambda"</span>, </span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="fu">paste0</span>(<span class="st">"psi"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb4-7"><a href="#cb4-7"></a>  )</span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co"># trace plot</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="fu">plot.ts</span>(</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="fu">t</span>(spec<span class="sc">$</span>prior<span class="sc">$</span>hyper), </span>
+<span id="cb4-12"><a href="#cb4-12"></a>  <span class="at">main =</span> <span class="st">"Hyper-parameter trace plot"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13"></a>  <span class="at">col =</span> <span class="st">"#F500BD"</span>, </span>
+<span id="cb4-14"><a href="#cb4-14"></a>  <span class="at">bty =</span> <span class="st">"n"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15"></a>  <span class="at">nc =</span> <span class="dv">1</span>,</span>
+<span id="cb4-16"><a href="#cb4-16"></a>  <span class="at">cex.axis =</span> <span class="dv">2</span>,</span>
+<span id="cb4-17"><a href="#cb4-17"></a>  <span class="at">cex.lab =</span> <span class="dv">2</span>,</span>
+<span id="cb4-18"><a href="#cb4-18"></a>  <span class="at">cex.main =</span> <span class="dv">2</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/prior_plot-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="estimation-forecasting-and-visualisation" class="slide level2">
+<h2>Estimation, Forecasting and Visualisation</h2>
+<div class="footer">
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
+</div>
+<div class="cell columns column-output-location" data-layout-align="center" data-hash="index_cache/revealjs/estimation_e26b0a37ffcc59476aafe24f724c9711">
+<div class="column">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># estimate the model</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>post <span class="ot">=</span> <span class="fu">estimate</span>(</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  spec, </span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="at">S =</span> S,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="at">show_progress =</span> <span class="cn">FALSE</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>)</span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co"># forecast</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>fore <span class="ot">=</span> <span class="fu">forecast</span>(post, <span class="at">horizon =</span> <span class="dv">8</span>)</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="co"># plot the forecasts</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="fu">plot</span>(</span>
+<span id="cb5-13"><a href="#cb5-13"></a>  fore, </span>
+<span id="cb5-14"><a href="#cb5-14"></a>  <span class="at">data_in_plot =</span> <span class="fl">0.5</span>, </span>
+<span id="cb5-15"><a href="#cb5-15"></a>  <span class="at">probability =</span> <span class="fl">0.68</span>, </span>
+<span id="cb5-16"><a href="#cb5-16"></a>  <span class="at">col =</span> <span class="st">"#F500BD"</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/estimation-1.png" width="960"></p>
+</figure>
+</div>
+</div>
 </div>
 </div>
 </section>
 <section id="forecasting" class="slide level2">
 <h2>Forecasting</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
-<div class="cell" data-layout-align="center" data-hash="index_cache/revealjs/forecasting_6fc4321103861e08dc2adb5bfd629d10">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># forecasting </span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">predict</span>(run) <span class="ot">&lt;-</span> <span class="fu">predict</span>(</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  run, </span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="at">horizon =</span> <span class="dv">20</span>, </span>
-<span id="cb5-5"><a href="#cb5-5"></a>  <span class="at">conf_bands =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="fl">0.05</span>, <span class="at">to =</span> <span class="fl">0.4</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>)</span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="fu">plot</span>(</span>
-<span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">predict</span>(run), </span>
-<span id="cb5-9"><a href="#cb5-9"></a>  <span class="at">area =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb5-10"><a href="#cb5-10"></a>  <span class="at">t_back =</span> <span class="dv">32</span>,</span>
-<span id="cb5-11"><a href="#cb5-11"></a>  <span class="at">vars =</span> <span class="fu">c</span>(<span class="st">"GDPC1"</span>)</span>
-<span id="cb5-12"><a href="#cb5-12"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-</section>
-<section id="forecasting-output" class="slide level2 output-location-slide"><h2>Forecasting</h2><div class="cell output-location-slide" data-layout-align="center" data-hash="index_cache/revealjs/forecasting_6fc4321103861e08dc2adb5bfd629d10">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="index_files/figure-revealjs/forecasting-1.png" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div></section><section id="forecasting-1" class="slide level2">
-<h2>Forecasting</h2>
-<div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
-</div>
-
-<img data-src="index_files/figure-revealjs/forecasting-gdpdef-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section id="forecasting-2" class="slide level2">
-<h2>Forecasting</h2>
-<div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
-</div>
-
-<img data-src="index_files/figure-revealjs/forecasting-ffr-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section id="forecasting-3" class="slide level2">
-<h2>Forecasting</h2>
-<div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
-</div>
-<div class="cell" data-layout-align="center" data-hash="index_cache/revealjs/3D-gdp_f936a562dcf6ab87fd42218307e8c2e9">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>Y.h   <span class="ot">=</span> <span class="fu">aperm</span>(run<span class="sc">$</span>fcast<span class="sc">$</span>fcast, <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">1</span>))</span>
-<span id="cb6-2"><a href="#cb6-2"></a>h     <span class="ot">=</span> <span class="fu">dim</span>(Y.h)[<span class="dv">1</span>]</span>
+<div class="cell" data-layout-align="center" data-hash="index_cache/revealjs/3D-gdp_cff7ccd7357a21855bbd6081f922c28a">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>forecasts_prod <span class="ot">=</span> fore<span class="sc">$</span>forecasts[<span class="dv">1</span>,,]</span>
+<span id="cb6-2"><a href="#cb6-2"></a>h           <span class="ot">=</span> <span class="fu">dim</span>(forecasts_prod)[<span class="dv">1</span>]</span>
 <span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a>limits<span class="fl">.1</span>    <span class="ot">=</span> <span class="fu">range</span>(Y.h[,<span class="dv">1</span>,])</span>
-<span id="cb6-5"><a href="#cb6-5"></a>point.f     <span class="ot">=</span> <span class="fu">apply</span>(Y.h[,<span class="dv">1</span>,],<span class="dv">1</span>,mean)</span>
-<span id="cb6-6"><a href="#cb6-6"></a>interval.f  <span class="ot">=</span> <span class="fu">apply</span>(Y.h[,<span class="dv">1</span>,],<span class="dv">1</span>,HDInterval<span class="sc">::</span>hdi,<span class="at">credMass=</span><span class="fl">0.90</span>)</span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a>x           <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>limits<span class="fl">.1</span>[<span class="dv">1</span>], <span class="at">to=</span>limits<span class="fl">.1</span>[<span class="dv">2</span>], <span class="at">length.out=</span><span class="dv">100</span>)</span>
-<span id="cb6-9"><a href="#cb6-9"></a>z           <span class="ot">=</span> <span class="fu">matrix</span>(<span class="cn">NA</span>,h,<span class="dv">99</span>)</span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>h){</span>
-<span id="cb6-11"><a href="#cb6-11"></a>  z[i,]     <span class="ot">=</span> <span class="fu">hist</span>(Y.h[i,<span class="dv">1</span>,], <span class="at">breaks=</span>x, <span class="at">plot=</span><span class="cn">FALSE</span>)<span class="sc">$</span>density</span>
-<span id="cb6-12"><a href="#cb6-12"></a>}</span>
-<span id="cb6-13"><a href="#cb6-13"></a>x           <span class="ot">=</span> <span class="fu">hist</span>(Y.h[i,<span class="dv">1</span>,], <span class="at">breaks=</span>x, <span class="at">plot=</span><span class="cn">FALSE</span>)<span class="sc">$</span>mids</span>
-<span id="cb6-14"><a href="#cb6-14"></a>yy          <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span>h</span>
-<span id="cb6-15"><a href="#cb6-15"></a>z           <span class="ot">=</span> <span class="fu">t</span>(z)</span>
-<span id="cb6-16"><a href="#cb6-16"></a></span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="fu">library</span>(plot3D)</span>
-<span id="cb6-18"><a href="#cb6-18"></a>theta <span class="ot">=</span> <span class="dv">180</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a>phi   <span class="ot">=</span> <span class="fl">15.5</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a>f4    <span class="ot">=</span> <span class="fu">persp3D</span>(<span class="at">x=</span>x, <span class="at">y=</span>yy, <span class="at">z=</span>z, <span class="at">phi=</span>phi, <span class="at">theta=</span>theta, <span class="at">xlab=</span><span class="st">"</span><span class="sc">\n</span><span class="st">rgdp[t+h|t]"</span>, <span class="at">ylab=</span><span class="st">"h"</span>, <span class="at">zlab=</span><span class="st">"</span><span class="sc">\n</span><span class="st">predictive densities of rgdp"</span>, <span class="at">shade=</span><span class="cn">NA</span>, <span class="at">border=</span><span class="cn">NA</span>, <span class="at">ticktype=</span><span class="st">"detailed"</span>, <span class="at">nticks=</span><span class="dv">3</span>,<span class="at">cex.lab=</span><span class="dv">1</span>, <span class="at">col=</span><span class="cn">NA</span>,<span class="at">plot=</span><span class="cn">FALSE</span>)</span>
-<span id="cb6-21"><a href="#cb6-21"></a><span class="fu">perspbox</span> (<span class="at">x=</span>x, <span class="at">y=</span>yy, <span class="at">z=</span>z, <span class="at">bty=</span><span class="st">"f"</span>, <span class="at">col.axis=</span><span class="st">"black"</span>, <span class="at">phi=</span>phi, <span class="at">theta=</span>theta, <span class="at">xlab=</span><span class="st">"</span><span class="sc">\n</span><span class="st">rgdp[t+h|t]"</span>, <span class="at">ylab=</span><span class="st">"h"</span>, <span class="at">zlab=</span><span class="st">"</span><span class="sc">\n</span><span class="st">predictive densities of rgdp"</span>, <span class="at">ticktype=</span><span class="st">"detailed"</span>, <span class="at">nticks=</span><span class="dv">3</span>,<span class="at">cex.lab=</span><span class="dv">1</span>, <span class="at">col =</span> <span class="cn">NULL</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-22"><a href="#cb6-22"></a><span class="fu">polygon3D</span>(<span class="at">x=</span><span class="fu">c</span>(interval.f[<span class="dv">1</span>,],interval.f[<span class="dv">2</span>,h<span class="sc">:</span><span class="dv">1</span>]), <span class="at">y=</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>h,h<span class="sc">:</span><span class="dv">1</span>), <span class="at">z=</span><span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>h), <span class="at">col =</span> <span class="st">"#F500BD"</span>, <span class="at">NAcol =</span> <span class="st">"white"</span>, <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-23"><a href="#cb6-23"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>h){</span>
-<span id="cb6-24"><a href="#cb6-24"></a>  f4.l <span class="ot">=</span> <span class="fu">trans3d</span>(<span class="at">x=</span>x, <span class="at">y=</span>yy[i], <span class="at">z=</span>z[,i], <span class="at">pmat=</span>f4)</span>
-<span id="cb6-25"><a href="#cb6-25"></a>  <span class="fu">lines</span>(f4.l, <span class="at">lwd=</span><span class="fl">0.5</span>, <span class="at">col=</span><span class="st">"black"</span>)</span>
-<span id="cb6-26"><a href="#cb6-26"></a>}</span>
-<span id="cb6-27"><a href="#cb6-27"></a>f4.l1 <span class="ot">=</span> <span class="fu">trans3d</span>(<span class="at">x=</span>point.f, <span class="at">y=</span>yy, <span class="at">z=</span><span class="dv">0</span>, <span class="at">pmat=</span>f4)</span>
-<span id="cb6-28"><a href="#cb6-28"></a><span class="fu">lines</span>(f4.l1, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a>limits<span class="fl">.1</span>    <span class="ot">=</span> <span class="fu">range</span>(forecasts_prod)</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a>point.f     <span class="ot">=</span> <span class="fu">apply</span>(forecasts_prod,<span class="dv">1</span>,mean)</span>
+<span id="cb6-8"><a href="#cb6-8"></a>interval.f  <span class="ot">=</span> <span class="fu">apply</span>(forecasts_prod,<span class="dv">1</span>,HDInterval<span class="sc">::</span>hdi,<span class="at">credMass=</span><span class="fl">0.90</span>)</span>
+<span id="cb6-9"><a href="#cb6-9"></a></span>
+<span id="cb6-10"><a href="#cb6-10"></a>x           <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>limits<span class="fl">.1</span>[<span class="dv">1</span>], <span class="at">to=</span>limits<span class="fl">.1</span>[<span class="dv">2</span>], <span class="at">length.out=</span><span class="dv">100</span>)</span>
+<span id="cb6-11"><a href="#cb6-11"></a>z           <span class="ot">=</span> <span class="fu">matrix</span>(<span class="cn">NA</span>,h,<span class="dv">99</span>)</span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>h){</span>
+<span id="cb6-13"><a href="#cb6-13"></a>  z[i,]     <span class="ot">=</span> <span class="fu">hist</span>(forecasts_prod[i,], <span class="at">breaks=</span>x, <span class="at">plot=</span><span class="cn">FALSE</span>)<span class="sc">$</span>density</span>
+<span id="cb6-14"><a href="#cb6-14"></a>}</span>
+<span id="cb6-15"><a href="#cb6-15"></a>x           <span class="ot">=</span> <span class="fu">hist</span>(forecasts_prod[i,], <span class="at">breaks=</span>x, <span class="at">plot=</span><span class="cn">FALSE</span>)<span class="sc">$</span>mids</span>
+<span id="cb6-16"><a href="#cb6-16"></a>yy          <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span>h</span>
+<span id="cb6-17"><a href="#cb6-17"></a>z           <span class="ot">=</span> <span class="fu">t</span>(z)</span>
+<span id="cb6-18"><a href="#cb6-18"></a></span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="fu">library</span>(plot3D)</span>
+<span id="cb6-20"><a href="#cb6-20"></a>theta <span class="ot">=</span> <span class="dv">150</span></span>
+<span id="cb6-21"><a href="#cb6-21"></a>phi   <span class="ot">=</span> <span class="fl">15.5</span></span>
+<span id="cb6-22"><a href="#cb6-22"></a>f4    <span class="ot">=</span> <span class="fu">persp3D</span>(<span class="at">x=</span>x, <span class="at">y=</span>yy, <span class="at">z=</span>z, <span class="at">phi=</span>phi, <span class="at">theta=</span>theta, <span class="at">xlab=</span><span class="st">"</span><span class="sc">\n</span><span class="st">productivity[t+h|t]"</span>, <span class="at">ylab=</span><span class="st">"h"</span>, <span class="at">zlab=</span><span class="st">"</span><span class="sc">\n</span><span class="st">predictive densities of productivity"</span>, <span class="at">shade=</span><span class="cn">NA</span>, <span class="at">border=</span><span class="cn">NA</span>, <span class="at">ticktype=</span><span class="st">"detailed"</span>, <span class="at">nticks=</span><span class="dv">3</span>,<span class="at">cex.lab=</span><span class="dv">1</span>, <span class="at">col=</span><span class="cn">NA</span>,<span class="at">plot=</span><span class="cn">FALSE</span>)</span>
+<span id="cb6-23"><a href="#cb6-23"></a></span>
+<span id="cb6-24"><a href="#cb6-24"></a><span class="fu">perspbox</span> (<span class="at">x=</span>x, <span class="at">y=</span>yy, <span class="at">z=</span>z, <span class="at">bty=</span><span class="st">"f"</span>, <span class="at">col.axis=</span><span class="st">"black"</span>, <span class="at">phi=</span>phi, <span class="at">theta=</span>theta, <span class="at">xlab=</span><span class="st">"</span><span class="sc">\n</span><span class="st">productivity[t+h|t]"</span>, <span class="at">ylab=</span><span class="st">"h"</span>, <span class="at">zlab=</span><span class="st">"</span><span class="sc">\n</span><span class="st">predictive densities of productivity"</span>, <span class="at">ticktype=</span><span class="st">"detailed"</span>, <span class="at">nticks=</span><span class="dv">3</span>,<span class="at">cex.lab=</span><span class="dv">1</span>, <span class="at">col =</span> <span class="cn">NULL</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-25"><a href="#cb6-25"></a></span>
+<span id="cb6-26"><a href="#cb6-26"></a><span class="fu">polygon3D</span>(<span class="at">x=</span><span class="fu">c</span>(interval.f[<span class="dv">1</span>,],interval.f[<span class="dv">2</span>,h<span class="sc">:</span><span class="dv">1</span>]), <span class="at">y=</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>h,h<span class="sc">:</span><span class="dv">1</span>), <span class="at">z=</span><span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>h), <span class="at">col =</span> <span class="st">"#F500BD"</span>, <span class="at">NAcol =</span> <span class="st">"white"</span>, <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">plot =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-27"><a href="#cb6-27"></a></span>
+<span id="cb6-28"><a href="#cb6-28"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>h){</span>
+<span id="cb6-29"><a href="#cb6-29"></a>  f4.l <span class="ot">=</span> <span class="fu">trans3d</span>(<span class="at">x=</span>x, <span class="at">y=</span>yy[i], <span class="at">z=</span>z[,i], <span class="at">pmat=</span>f4)</span>
+<span id="cb6-30"><a href="#cb6-30"></a>  <span class="fu">lines</span>(f4.l, <span class="at">lwd=</span><span class="fl">0.9</span>, <span class="at">col=</span><span class="st">"black"</span>)</span>
+<span id="cb6-31"><a href="#cb6-31"></a>}</span>
+<span id="cb6-32"><a href="#cb6-32"></a>f4.l1 <span class="ot">=</span> <span class="fu">trans3d</span>(<span class="at">x=</span>point.f, <span class="at">y=</span>yy, <span class="at">z=</span><span class="dv">0</span>, <span class="at">pmat=</span>f4)</span>
+<span id="cb6-33"><a href="#cb6-33"></a><span class="fu">lines</span>(f4.l1, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 </section>
-<section id="forecasting-3-output" class="slide level2 output-location-slide"><h2>Forecasting</h2><div class="cell output-location-slide" data-layout-align="center" data-hash="index_cache/revealjs/3D-gdp_f936a562dcf6ab87fd42218307e8c2e9">
+<section id="forecasting-output" class="slide level2 output-location-slide"><h2>Forecasting</h2><div class="cell output-location-slide" data-layout-align="center" data-hash="index_cache/revealjs/3D-gdp_cff7ccd7357a21855bbd6081f922c28a">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="index_files/figure-revealjs/3D-gdp-1.png" style="width:100.0%"></p>
+<p><img data-src="index_files/figure-revealjs/3D-gdp-1.png" width="960"></p>
 </figure>
 </div>
 </div>
-</div></section><section id="mcmc-convergence-for-hyper-parameters" class="slide level2">
-<h2>MCMC convergence for hyper-parameters</h2>
+</div></section><section id="mcmc-convergence-for-mathbfsigma_1cdot" class="slide level2">
+<h2>MCMC convergence for <span class="math inline">\(\mathbf\Sigma_{1\cdot}\)</span></h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
-<div class="cell" data-layout-align="center" data-hash="index_cache/revealjs/mcmc_a6603516b2f504bd1767d7d3b76c3314">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">plot.ts</span>(run<span class="sc">$</span>hyper, <span class="at">main =</span> <span class="st">""</span>, <span class="at">col =</span> <span class="st">"#F500BD"</span>, <span class="at">xlab =</span> <span class="st">"s"</span>, <span class="at">cex.lab =</span> <span class="dv">2</span>, <span class="at">cex.axis =</span> <span class="fl">1.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="index_files/figure-revealjs/mcmc-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section id="mcmc-convergence-for-mathbfsigma_cdot1" class="slide level2">
-<h2>MCMC convergence for <span class="math inline">\(\mathbf\Sigma_{\cdot1}\)</span></h2>
-<div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
-</div>
-<div class="cell" data-layout-align="center" data-hash="index_cache/revealjs/mcmc-si_ddba65adf875edcc6c17d386eef13a38">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">plot.ts</span>(run<span class="sc">$</span>sigma[,<span class="dv">1</span>,], <span class="at">main =</span> <span class="st">""</span>, <span class="at">col =</span> <span class="st">"#F500BD"</span>, <span class="at">xlab =</span> <span class="st">"s"</span>, <span class="at">cex.lab =</span> <span class="dv">2</span>, <span class="at">cex.axis =</span> <span class="fl">1.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-layout-align="center" data-hash="index_cache/revealjs/mcmc-si_808980dca884dbf19730255b78d92ffd">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">plot.ts</span>(<span class="fu">t</span>(post<span class="sc">$</span>posterior<span class="sc">$</span>Sigma[<span class="dv">1</span>,,]), <span class="at">main =</span> <span class="st">""</span>, <span class="at">col =</span> <span class="st">"#F500BD"</span>, <span class="at">xlab =</span> <span class="st">"s"</span>, <span class="at">cex.lab =</span> <span class="fl">1.3</span>, <span class="at">cex.axis =</span> <span class="fl">1.3</span>, <span class="at">bty =</span> <span class="st">"n"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/mcmc-si-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
 <section id="mcmc-convergence-for-boldsymbolmu_0" class="slide level2">
 <h2>MCMC convergence for <span class="math inline">\(\boldsymbol\mu_0\)</span></h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
-<div class="cell" data-layout-align="center" data-hash="index_cache/revealjs/mcmc-mu_3df51570e09727497049c2301756f1e3">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">plot.ts</span>(run<span class="sc">$</span>beta[,<span class="dv">1</span>,], <span class="at">main =</span> <span class="st">""</span>, <span class="at">col =</span> <span class="st">"#F500BD"</span>, <span class="at">xlab =</span> <span class="st">"s"</span>, <span class="at">cex.lab =</span> <span class="dv">2</span>, <span class="at">cex.axis =</span> <span class="fl">1.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-layout-align="center" data-hash="index_cache/revealjs/mcmc-mu_846e4a9dba895f45c9e16dce37a807ad">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">plot.ts</span>(<span class="fu">t</span>(post<span class="sc">$</span>posterior<span class="sc">$</span>A[,<span class="dv">13</span>,]), <span class="at">main =</span> <span class="st">""</span>, <span class="at">col =</span> <span class="st">"#F500BD"</span>, <span class="at">xlab =</span> <span class="st">"s"</span>, <span class="at">cex.lab =</span> <span class="fl">1.3</span>, <span class="at">cex.axis =</span> <span class="fl">1.3</span>, <span class="at">bty =</span> <span class="st">"n"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/mcmc-mu-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
 <section id="posterior-means-for-mathbfa" class="slide level2">
 <h2>Posterior means for <span class="math inline">\(\mathbf{A}\)</span></h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
-<div class="cell" data-hash="index_cache/revealjs/mean-a_12cb7cc5c34507d55c4d25f1201ab77a">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>mean_A  <span class="ot">=</span> <span class="fu">t</span>(<span class="fu">apply</span>(run<span class="sc">$</span>beta, <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>, mean))</span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">rownames</span>(mean_A) <span class="ot">=</span> <span class="fu">colnames</span>(x)</span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="fu">colnames</span>(mean_A) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"mu0"</span>,<span class="fu">paste0</span>(<span class="st">"A"</span>,<span class="dv">1</span><span class="sc">:</span>p <span class="sc">%x%</span> <span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">3</span>)))</span>
-<span id="cb10-4"><a href="#cb10-4"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mean_A, <span class="at">caption =</span> <span class="st">"Posterior estimates for autoregressive parameters"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="index_cache/revealjs/mean-a_fbff3fd5be708771a5093aeb5fba5daf">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>mean_A  <span class="ot">=</span> <span class="fu">apply</span>(post<span class="sc">$</span>posterior<span class="sc">$</span>A, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, mean)</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">rownames</span>(mean_A) <span class="ot">=</span> <span class="fu">colnames</span>(optimism[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)])</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="fu">colnames</span>(mean_A) <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">paste0</span>(<span class="st">"A"</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span> <span class="sc">%x%</span> <span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">3</span>)),<span class="st">"mu0"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mean_A, <span class="at">caption =</span> <span class="st">"Posterior estimates for autoregressive parameters"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table style="width:100%;">
 <caption>Posterior estimates for autoregressive parameters</caption>
 <colgroup>
+<col style="width: 14%">
 <col style="width: 6%">
-<col style="width: 6%">
+<col style="width: 5%">
 <col style="width: 6%">
 <col style="width: 5%">
 <col style="width: 6%">
 <col style="width: 6%">
 <col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 5%">
 <col style="width: 6%">
 <col style="width: 6%">
 <col style="width: 6%">
@@ -1646,78 +1321,70 @@ Finished MCMC after 7.89 secs.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">A1</th>
+<th style="text-align: right;">A1</th>
+<th style="text-align: right;">A1</th>
+<th style="text-align: right;">A2</th>
+<th style="text-align: right;">A2</th>
+<th style="text-align: right;">A2</th>
+<th style="text-align: right;">A3</th>
+<th style="text-align: right;">A3</th>
+<th style="text-align: right;">A3</th>
+<th style="text-align: right;">A4</th>
+<th style="text-align: right;">A4</th>
+<th style="text-align: right;">A4</th>
 <th style="text-align: right;">mu0</th>
-<th style="text-align: right;">A1</th>
-<th style="text-align: right;">A1</th>
-<th style="text-align: right;">A1</th>
-<th style="text-align: right;">A2</th>
-<th style="text-align: right;">A2</th>
-<th style="text-align: right;">A2</th>
-<th style="text-align: right;">A3</th>
-<th style="text-align: right;">A3</th>
-<th style="text-align: right;">A3</th>
-<th style="text-align: right;">A4</th>
-<th style="text-align: right;">A4</th>
-<th style="text-align: right;">A4</th>
-<th style="text-align: right;">A5</th>
-<th style="text-align: right;">A5</th>
-<th style="text-align: right;">A5</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0.01</td>
-<td style="text-align: right;">1.01</td>
-<td style="text-align: right;">-0.10</td>
+<td style="text-align: left;">productivity</td>
+<td style="text-align: right;">0.96</td>
 <td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.05</td>
-<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">-0.09</td>
+<td style="text-align: right;">0.09</td>
 <td style="text-align: right;">0.00</td>
-<td style="text-align: right;">-0.02</td>
 <td style="text-align: right;">0.02</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">-0.02</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">-0.02</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-0.08</td>
+<td style="text-align: right;">-0.01</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">-0.04</td>
+<td style="text-align: right;">0.01</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">stock_prices</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">-0.48</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">-0.11</td>
+<td style="text-align: right;">0.48</td>
+<td style="text-align: right;">0.18</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">-0.36</td>
+<td style="text-align: right;">-0.28</td>
 <td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">1.38</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.01</td>
-<td style="text-align: right;">-0.13</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">-0.10</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">-0.08</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">-0.06</td>
-<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.36</td>
+<td style="text-align: right;">-0.02</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">hours_worked</td>
+<td style="text-align: right;">-0.06</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">1.35</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">-0.25</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">-0.02</td>
+<td style="text-align: right;">-0.11</td>
 <td style="text-align: right;">-0.03</td>
-<td style="text-align: right;">11.40</td>
-<td style="text-align: right;">11.35</td>
-<td style="text-align: right;">1.21</td>
-<td style="text-align: right;">-3.67</td>
-<td style="text-align: right;">2.72</td>
-<td style="text-align: right;">-0.49</td>
-<td style="text-align: right;">-3.98</td>
-<td style="text-align: right;">-8.60</td>
-<td style="text-align: right;">0.36</td>
-<td style="text-align: right;">-2.39</td>
-<td style="text-align: right;">-3.73</td>
-<td style="text-align: right;">-0.12</td>
-<td style="text-align: right;">-1.36</td>
-<td style="text-align: right;">-1.76</td>
-<td style="text-align: right;">-0.03</td>
+<td style="text-align: right;">-0.01</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 </tbody>
 </table>
@@ -1727,19 +1394,20 @@ Finished MCMC after 7.89 secs.</code></pre>
 <section id="posterior-means-for-mathbfsigma" class="slide level2">
 <h2>Posterior means for <span class="math inline">\(\mathbf\Sigma\)</span></h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
-<div class="cell" data-hash="index_cache/revealjs/mean-s_40134ea85726afea4d863488af91e3b0">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>mean_S  <span class="ot">=</span> <span class="fu">t</span>(<span class="fu">apply</span>(run<span class="sc">$</span>sigma, <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>, mean))</span>
-<span id="cb11-2"><a href="#cb11-2"></a>mean_S  <span class="ot">=</span> <span class="fu">cbind</span>(mean_S, <span class="fu">cov2cor</span>(mean_S))</span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">rownames</span>(mean_S) <span class="ot">=</span> <span class="fu">colnames</span>(x)</span>
-<span id="cb11-4"><a href="#cb11-4"></a><span class="fu">colnames</span>(mean_S) <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"cov"</span>,<span class="dv">3</span>),<span class="fu">rep</span>(<span class="st">"cor"</span>,<span class="dv">3</span>))</span>
-<span id="cb11-5"><a href="#cb11-5"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mean_S, <span class="at">caption =</span> <span class="st">"Posterior estimates for covariance"</span>, <span class="at">digits =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="index_cache/revealjs/mean-s_b5954e53cb52c4dd3e19bd06eb3fb8d8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>mean_S  <span class="ot">=</span> <span class="fu">t</span>(<span class="fu">apply</span>(post<span class="sc">$</span>posterior<span class="sc">$</span>Sigma, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, mean))</span>
+<span id="cb10-2"><a href="#cb10-2"></a>mean_S  <span class="ot">=</span> <span class="fu">cbind</span>(mean_S, <span class="fu">cov2cor</span>(mean_S))</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="fu">rownames</span>(mean_S) <span class="ot">=</span> <span class="fu">colnames</span>(optimism[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)])</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="fu">colnames</span>(mean_S) <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"cov"</span>,<span class="dv">3</span>),<span class="fu">rep</span>(<span class="st">"cor"</span>,<span class="dv">3</span>))</span>
+<span id="cb10-5"><a href="#cb10-5"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mean_S, <span class="at">caption =</span> <span class="st">"Posterior estimates for covariance"</span>, <span class="at">digits =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table>
 <caption>Posterior estimates for covariance</caption>
 <thead>
 <tr class="header">
+<th style="text-align: left;"></th>
 <th style="text-align: right;">cov</th>
 <th style="text-align: right;">cov</th>
 <th style="text-align: right;">cov</th>
@@ -1750,27 +1418,30 @@ Finished MCMC after 7.89 secs.</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0.00015</td>
-<td style="text-align: right;">0.00001</td>
-<td style="text-align: right;">0.00199</td>
+<td style="text-align: left;">productivity</td>
+<td style="text-align: right;">7e-05</td>
+<td style="text-align: right;">-0.00005</td>
+<td style="text-align: right;">0e+00</td>
 <td style="text-align: right;">1.00000</td>
-<td style="text-align: right;">0.09814</td>
-<td style="text-align: right;">0.21109</td>
+<td style="text-align: right;">-0.07692</td>
+<td style="text-align: right;">0.01586</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">0.00001</td>
-<td style="text-align: right;">0.00002</td>
-<td style="text-align: right;">0.00033</td>
-<td style="text-align: right;">0.09814</td>
+<td style="text-align: left;">stock_prices</td>
+<td style="text-align: right;">-5e-05</td>
+<td style="text-align: right;">0.00662</td>
+<td style="text-align: right;">7e-05</td>
+<td style="text-align: right;">-0.07692</td>
 <td style="text-align: right;">1.00000</td>
-<td style="text-align: right;">0.09753</td>
+<td style="text-align: right;">0.12352</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">0.00199</td>
-<td style="text-align: right;">0.00033</td>
-<td style="text-align: right;">0.60762</td>
-<td style="text-align: right;">0.21109</td>
-<td style="text-align: right;">0.09753</td>
+<td style="text-align: left;">hours_worked</td>
+<td style="text-align: right;">0e+00</td>
+<td style="text-align: right;">0.00007</td>
+<td style="text-align: right;">4e-05</td>
+<td style="text-align: right;">0.01586</td>
+<td style="text-align: right;">0.12352</td>
 <td style="text-align: right;">1.00000</td>
 </tr>
 </tbody>
@@ -1781,12 +1452,12 @@ Finished MCMC after 7.89 secs.</code></pre>
 <section id="posterior-means-for-hyper-parameters" class="slide level2">
 <h2>Posterior means for hyper-parameters</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 <div class="cell" data-hash="index_cache/revealjs/mean-h_cffd5ffae4f0c0c000140d31d6234ce5">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>mean_h  <span class="ot">=</span> <span class="fu">rbind</span>(<span class="fu">apply</span>(run<span class="sc">$</span>hyper, <span class="dv">2</span>, mean), <span class="fu">apply</span>(run<span class="sc">$</span>hyper, <span class="dv">2</span>, sd))</span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">rownames</span>(mean_h) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"E[hyper|data]"</span>, <span class="st">"sd[hyper|data]"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mean_h, <span class="at">caption =</span> <span class="st">"Posterior estimates for hyper-parameters"</span>, <span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>mean_h  <span class="ot">=</span> <span class="fu">rbind</span>(<span class="fu">apply</span>(run<span class="sc">$</span>hyper, <span class="dv">2</span>, mean), <span class="fu">apply</span>(run<span class="sc">$</span>hyper, <span class="dv">2</span>, sd))</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">rownames</span>(mean_h) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"E[hyper|data]"</span>, <span class="st">"sd[hyper|data]"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mean_h, <span class="at">caption =</span> <span class="st">"Posterior estimates for hyper-parameters"</span>, <span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table>
 <caption>Posterior estimates for hyper-parameters</caption>
@@ -1819,10 +1490,10 @@ Finished MCMC after 7.89 secs.</code></pre>
 <section id="australian-data-forecasting" class="slide level2">
 <h2>Australian Data Forecasting</h2>
 <div class="footer">
-<p><a href="https://bayesian-econometrics-2023.github.io/be23-lecture7/">Bayesian VARs</a></p>
+<p><a href="https://bsvars.github.io/2024-10-be24-bsvarSIGNs">Bayesian VARs</a></p>
 </div>
 <p><span class="math display">\[ \]</span></p>
-<p><a href="https://github.com/Bayesian-Econometrics-2023/be23-lecture7/blob/main/be23-AUdata.qmd">DOWNLOAD THE SCRIPT</a></p>
+<p><a href="https://github.com/bsvars/2024-10-be24-bsvarSIGNs/blob/main/be23-AUdata.qmd">DOWNLOAD THE SCRIPT</a></p>
 <div class="footer footer-default">
 
 </div>
